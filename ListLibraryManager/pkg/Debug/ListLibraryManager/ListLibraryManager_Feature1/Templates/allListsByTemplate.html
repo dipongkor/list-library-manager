@@ -1,0 +1,23 @@
+﻿<div class="col-md-12">
+    <h2>{{vm.templateName}}</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Total item</th>
+            <th>Action</th>
+        </tr>
+        <tr data-ng-repeat="list in vm.allLists">
+            <td>{{list.Title}}</td>
+            <td>{{list.Description}}</td>
+            <td>{{list.ItemCount}}</td>
+            <td>
+                <a ui-sref="app.list({listId: list.Id, listName.Title})">
+                    <span unselectable=" on" class=" ms-cui-img-32by32 ms-cui-img-cont-float">
+                        <img unselectable="on" alt="" src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -375px; left: -511px;">
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

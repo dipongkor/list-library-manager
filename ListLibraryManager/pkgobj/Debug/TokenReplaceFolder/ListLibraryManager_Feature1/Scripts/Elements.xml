@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.map" Url="Scripts/jquery-1.9.1.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.js" Url="Scripts/jquery-1.9.1.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.js" Url="Scripts/jquery-1.9.1.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.intellisense.js" Url="Scripts/jquery-1.9.1.intellisense.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-ui\ui-bootstrap-tpls.min.js" Url="Scripts/angular-ui/ui-bootstrap-tpls.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-ui\ui-bootstrap-tpls.js" Url="Scripts/angular-ui/ui-bootstrap-tpls.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-ui\ui-bootstrap.min.js" Url="Scripts/angular-ui/ui-bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-ui\ui-bootstrap.js" Url="Scripts/angular-ui/ui-bootstrap.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-mocks.js" Url="Scripts/angular-mocks.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js.map" Url="Scripts/angular.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js" Url="Scripts/angular.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.js" Url="Scripts/angular.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js.map" Url="Scripts/angular-route.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js" Url="Scripts/angular-route.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.js" Url="Scripts/angular-route.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-animate.min.js.map" Url="Scripts/angular-animate.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-animate.min.js" Url="Scripts/angular-animate.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-animate.js" Url="Scripts/angular-animate.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-touch.min.js.map" Url="Scripts/angular-touch.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-touch.min.js" Url="Scripts/angular-touch.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-touch.js" Url="Scripts/angular-touch.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.js" Url="Scripts/bootstrap.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\sp-ng-module.min.js" Url="Scripts/sp-ng-module.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\app.js" Url="Scripts/App/app.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\home.js" Url="Scripts/App/controllers/home.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\services\listLibraryManager.js" Url="Scripts/App/services/listLibraryManager.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\loading-bar.min.js" Url="Scripts/loading-bar.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\loading-bar.js" Url="Scripts/loading-bar.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-aria.min.js.map" Url="Scripts/angular-aria.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-aria.min.js" Url="Scripts/angular-aria.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-aria.js" Url="Scripts/angular-aria.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-ui-router.min.js" Url="Scripts/angular-ui-router.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-ui-router.js" Url="Scripts/angular-ui-router.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\main.js" Url="Scripts/App/controllers/main.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\listsByTemplate.js" Url="Scripts/App/controllers/listsByTemplate.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\directives\navigation.js" Url="Scripts/App/directives/navigation.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\listDetails.js" Url="Scripts/App/controllers/listDetails.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

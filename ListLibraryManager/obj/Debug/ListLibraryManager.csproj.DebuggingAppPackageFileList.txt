@@ -1,0 +1,1 @@
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\bin\Debug\ListLibraryManager.debugapp

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="SharePoint App Feature" Id="31848e0f-34d2-4f7e-ac57-6b321591ccdd" Scope="Web" Title="ListLibraryManager Feature1" Version="1.0.0.0">
+  <ElementManifests>
+    <ElementManifest Location="Pages\Elements.xml" />
+    <ElementFile Location="Pages\Default.aspx" />
+    <ElementManifest Location="Scripts\Elements.xml" />
+    <ElementFile Location="Scripts\App.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.map" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.intellisense.js" />
+    <ElementFile Location="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <ElementFile Location="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <ElementFile Location="Scripts\angular-ui\ui-bootstrap.min.js" />
+    <ElementFile Location="Scripts\angular-ui\ui-bootstrap.js" />
+    <ElementFile Location="Scripts\angular-mocks.js" />
+    <ElementFile Location="Scripts\angular.min.js.map" />
+    <ElementFile Location="Scripts\angular.min.js" />
+    <ElementFile Location="Scripts\angular.js" />
+    <ElementFile Location="Scripts\angular-route.min.js.map" />
+    <ElementFile Location="Scripts\angular-route.min.js" />
+    <ElementFile Location="Scripts\angular-route.js" />
+    <ElementFile Location="Scripts\angular-animate.min.js.map" />
+    <ElementFile Location="Scripts\angular-animate.min.js" />
+    <ElementFile Location="Scripts\angular-animate.js" />
+    <ElementFile Location="Scripts\angular-touch.min.js.map" />
+    <ElementFile Location="Scripts\angular-touch.min.js" />
+    <ElementFile Location="Scripts\angular-touch.js" />
+    <ElementFile Location="Scripts\bootstrap.min.js" />
+    <ElementFile Location="Scripts\bootstrap.js" />
+    <ElementFile Location="Scripts\sp-ng-module.min.js" />
+    <ElementFile Location="Scripts\App\app.js" />
+    <ElementFile Location="Scripts\App\controllers\home.js" />
+    <ElementFile Location="Scripts\App\services\listLibraryManager.js" />
+    <ElementFile Location="Scripts\loading-bar.min.js" />
+    <ElementFile Location="Scripts\loading-bar.js" />
+    <ElementFile Location="Scripts\angular-aria.min.js.map" />
+    <ElementFile Location="Scripts\angular-aria.min.js" />
+    <ElementFile Location="Scripts\angular-aria.js" />
+    <ElementFile Location="Scripts\angular-ui-router.min.js" />
+    <ElementFile Location="Scripts\angular-ui-router.js" />
+    <ElementFile Location="Scripts\App\controllers\main.js" />
+    <ElementFile Location="Scripts\App\controllers\listsByTemplate.js" />
+    <ElementFile Location="Scripts\App\directives\navigation.js" />
+    <ElementFile Location="Scripts\App\controllers\listDetails.js" />
+    <ElementManifest Location="Content\Elements.xml" />
+    <ElementFile Location="Content\App.css" />
+    <ElementFile Location="Content\ui-bootstrap-csp.css" />
+    <ElementFile Location="Content\bootstrap-theme.min.css" />
+    <ElementFile Location="Content\bootstrap-theme.css" />
+    <ElementFile Location="Content\bootstrap.min.css" />
+    <ElementFile Location="Content\bootstrap.css" />
+    <ElementFile Location="Content\loading-bar.min.css" />
+    <ElementFile Location="Content\loading-bar.css" />
+    <ElementManifest Location="Images\Elements.xml" />
+    <ElementFile Location="Images\AppIcon.png" />
+    <ElementManifest Location="Elements.xml" />
+    <ElementFile Location="fonts\glyphicons-halflings-regular.woff" />
+    <ElementFile Location="fonts\glyphicons-halflings-regular.ttf" />
+    <ElementFile Location="fonts\glyphicons-halflings-regular.svg" />
+    <ElementFile Location="fonts\glyphicons-halflings-regular.eot" />
+    <ElementFile Location="Templates\home.html" />
+    <ElementFile Location="Templates\main.html" />
+    <ElementFile Location="Templates\allListsByTemplate.html" />
+    <ElementFile Location="Templates\directives\navigation.html" />
+    <ElementFile Location="Templates\list\list-details.html" />
+    <ElementManifest Location="Views\Elements.xml" />
+    <ElementFile Location="Views\Sample.txt" />
+  </ElementManifests>
+  <UpgradeActions>
+    <VersionRange>
+      <ApplyElementManifests>
+        <ElementManifest Location="Pages\Elements.xml" />
+        <ElementManifest Location="Scripts\Elements.xml" />
+        <ElementManifest Location="Content\Elements.xml" />
+        <ElementManifest Location="Images\Elements.xml" />
+        <ElementManifest Location="Elements.xml" />
+        <ElementManifest Location="Views\Elements.xml" />
+      </ApplyElementManifests>
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

@@ -1,0 +1,3 @@
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\bin\Debug\ListLibraryManager.pdb
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\obj\Debug\ListLibraryManager.dll
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\obj\Debug\ListLibraryManager.pdb
