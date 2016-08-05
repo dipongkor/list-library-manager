@@ -1,23 +1,92 @@
 ﻿<div class="col-md-12">
     <h2>{{vm.listName}}</h2>
-    <!--<table class="table table-bordered">
+    <table class="table table-bordered">
         <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Total item</th>
-            <th>Action</th>
-        </tr>
-        <tr data-ng-repeat="list in vm.allLists">
-            <td>{{list.Title}}</td>
-            <td>{{list.Description}}</td>
-            <td>{{list.ItemCount}}</td>
             <td>
-                <a ui-sref="app.list({listId: list.Id, listName.Title})">
-                    <span unselectable=" on" class=" ms-cui-img-32by32 ms-cui-img-cont-float">
-                        <img unselectable="on" alt="" src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -375px; left: -511px;">
-                    </span>
-                </a>
+                Name
             </td>
+            <td>{{vm.selectedList.Title}}</td>
         </tr>
-    </table>-->
+        <tr>
+            <td>
+                Description
+            </td>
+            <td>{{vm.selectedList.Description}}</td>
+        </tr>
+        <tr>
+            <td>
+                Allow management of content types
+            </td>
+            <td>{{vm.selectedList.ContentTypesEnabled | booleanToText}}</td>
+        </tr>
+        <tr>
+            <td>
+                Versioning Enabled
+            </td>
+            <td>{{vm.selectedList.EnableVersioning | booleanToText}}</td>
+        </tr>
+        <tr>
+            <td>
+                Hidden
+            </td>
+            <td>{{vm.selectedList.Hidden | booleanToText}}</td>
+        </tr>
+        <tr>
+            <td>
+                Total Items
+            </td>
+            <td>{{vm.selectedList.ItemCount}}</td>
+        </tr>
+    </table>
+
+    <div class="pull-right">
+        <span class="ms-cui-row-onerow">
+            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.listEdit({listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
+                <span class="ms-cui-ctl-largeIconContainer">
+                    <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
+                        <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -375px; left: -511px;">
+                    </span>
+                </span>
+                <span class="ms-cui-ctl-largelabel">
+                    Edit <br /> Properties
+                </span>
+            </a>
+
+            <a href="javascript:;" class="ms-cui-ctl-large ">
+                <span class="ms-cui-ctl-largeIconContainer">
+                    <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
+                        <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: 0px; left: 0px;">
+                    </span>
+                </span>
+                <span class="ms-cui-ctl-largelabel">Clear <br /> Data</span>
+            </a>
+
+            <a href="javascript:;" class="ms-cui-ctl-large ">
+                <span class="ms-cui-ctl-largeIconContainer">
+                    <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
+                        <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -239px; left: -411px;">
+                    </span>
+                </span>
+                <span class="ms-cui-ctl-largelabel">Add <br /> Columns</span>
+            </a>
+
+            <a href="javascript:;" class="ms-cui-ctl-large ">
+                <span class="ms-cui-ctl-largeIconContainer">
+                    <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
+                        <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -175px; left: -411px;">
+                    </span>
+                </span>
+                <span class="ms-cui-ctl-largelabel">Remove <br /> Columns</span>
+            </a>
+
+            <a href="javascript:void(0);" class="ms-cui-ctl-large" data-ng-click="vm.removeList(vm.selectedList.Id)">
+                <span class="ms-cui-ctl-largeIconContainer">
+                    <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
+                        <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -241px; left: -105px;">
+                    </span>
+                </span>
+                <span class="ms-cui-ctl-largelabel">Remove <br /> List</span>
+            </a>
+        </span>
+    </div>
 </div>

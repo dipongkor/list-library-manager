@@ -2,3 +2,13 @@
 #s4-titlerow, #suiteBarDelta,#s4-ribbonrow{
     display:none!important;
 }
+
+.ms-cui-ctl-largelabel, a.ms-cui-ctl-large{
+    cursor:pointer!important;
+    text-decoration:none;
+}
+
+.ms-cui-img-32by32 img{
+    cursor:pointer!important;
+}
+

@@ -10,5 +10,6 @@
     <File Path="Templates\allListsByTemplate.html" Url="Templates/allListsByTemplate.html" ReplaceContent="TRUE" />
     <File Path="Templates\directives\navigation.html" Url="Templates/directives/navigation.html" ReplaceContent="TRUE" />
     <File Path="Templates\list\list-details.html" Url="Templates/list/list-details.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\list-edit.html" Url="Templates/list/list-edit.html" ReplaceContent="TRUE" />
   </Module>
 </Elements>

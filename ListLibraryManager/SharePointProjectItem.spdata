@@ -11,5 +11,6 @@
     <ProjectItemFile Source="Templates\allListsByTemplate.html" Target="Templates\" Type="ElementFile" />
     <ProjectItemFile Source="Templates\directives\navigation.html" Target="Templates\directives\" Type="ElementFile" />
     <ProjectItemFile Source="Templates\list\list-details.html" Target="Templates\list\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\list-edit.html" Target="Templates\list\" Type="ElementFile" />
   </Files>
 </ProjectItem>

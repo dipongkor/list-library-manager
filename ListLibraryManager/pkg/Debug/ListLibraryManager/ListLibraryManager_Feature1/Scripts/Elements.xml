@@ -40,5 +40,7 @@
     <File Path="Scripts\App\controllers\listsByTemplate.js" Url="Scripts/App/controllers/listsByTemplate.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\directives\navigation.js" Url="Scripts/App/directives/navigation.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\controllers\listDetails.js" Url="Scripts/App/controllers/listDetails.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\filters\booleanToText.js" Url="Scripts/App/filters/booleanToText.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\listEdit.js" Url="Scripts/App/controllers/listEdit.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

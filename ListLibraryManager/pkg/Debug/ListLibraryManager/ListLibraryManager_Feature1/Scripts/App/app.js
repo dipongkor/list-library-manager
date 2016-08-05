@@ -37,6 +37,12 @@
             templateUrl: "../Templates/list/list-details.html",
             controller: "listDetailsCtrl",
             controllerAs: "vm"
+        })
+        .state("app.listEdit", {
+            url: "/list/edit/{listId}/{listName}",
+            templateUrl: "../Templates/list/list-edit.html",
+            controller: "listEditCtrl",
+            controllerAs: "vm"
         });
     }
 })();

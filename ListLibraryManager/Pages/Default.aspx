@@ -33,13 +33,15 @@
     <script src="../Scripts/App/controllers/home.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/main.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/listsByTemplate.js" type="text/javascript"></script>
-    <script src="../Scripts/App/controllers/listDetails.js"></script>
+    <script src="../Scripts/App/controllers/listDetails.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/listEdit.js" type="text/javascript"></script>
      <!-- Services -->
     <script src="../Scripts/App/services/listLibraryManager.js" type="text/javascript"></script>
 
      <!-- Directives -->
     <script src="../Scripts/App/directives/navigation.js" type="text/javascript"></script>
-
+    <!-- Filters -->
+    <script src="../Scripts/App/filters/booleanToText.js"></script>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>

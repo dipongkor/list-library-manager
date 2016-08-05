@@ -41,5 +41,7 @@
     <ProjectItemFile Source="App\controllers\listsByTemplate.js" Target="Scripts\App\controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\directives\navigation.js" Target="Scripts\App\directives\" Type="ElementFile" />
     <ProjectItemFile Source="App\controllers\listDetails.js" Target="Scripts\App\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="App\filters\booleanToText.js" Target="Scripts\App\filters\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\listEdit.js" Target="Scripts\App\controllers\" Type="ElementFile" />
   </Files>
 </ProjectItem>

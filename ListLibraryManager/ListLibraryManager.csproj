@@ -53,9 +53,11 @@
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\App\controllers\home.js" />
     <Content Include="Scripts\App\controllers\listDetails.js" />
+    <Content Include="Scripts\App\controllers\listEdit.js" />
     <Content Include="Scripts\App\controllers\listsByTemplate.js" />
     <Content Include="Scripts\App\controllers\main.js" />
     <Content Include="Scripts\App\directives\navigation.js" />
+    <Content Include="Scripts\App\filters\booleanToText.js" />
     <Content Include="Scripts\App\services\listLibraryManager.js" />
     <Content Include="Scripts\loading-bar.js" />
     <Content Include="Scripts\loading-bar.min.js" />
@@ -63,6 +65,7 @@
     <Content Include="Templates\directives\navigation.html" />
     <Content Include="Templates\home.html" />
     <Content Include="Templates\list\list-details.html" />
+    <Content Include="Templates\list\list-edit.html" />
     <Content Include="Templates\main.html" />
     <Content Include="Views\Elements.xml" />
     <Content Include="Views\Sample.txt" />

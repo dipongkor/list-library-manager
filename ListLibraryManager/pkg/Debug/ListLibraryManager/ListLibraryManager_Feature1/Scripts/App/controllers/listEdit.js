@@ -1,11 +1,11 @@
 ﻿(function () {
     "use strict";
     angular.module("listLibraryManagerApp")
-    .controller("listDetailsCtrl", listDetailsCtrl);
+    .controller("listEditCtrl", listEditCtrl);
 
-    listDetailsCtrl.$inject = ["listLibraryManagerSvc", "$stateParams", "$window"];
+    listEditCtrl.$inject = ["listLibraryManagerSvc", "$stateParams", "$state"];
 
-    function listDetailsCtrl(listLibraryManagerSvc, $stateParams, $window) {
+    function listEditCtrl(listLibraryManagerSvc, $stateParams, $state) {
         var vm = this;
 
         var listId = $stateParams.listId;
@@ -20,11 +20,11 @@
 
         });
 
-        vm.removeList = function (listId) {
+        vm.updateList = function (selectedList) {
             listLibraryManagerSvc
-            .removeList(listId)
-            .then(function (response) {
-                $window.history.back();
+                .updateList(selectedList)
+            .then(function (data) {
+                $state.go("app.list", { listId: selectedList.Id, listName: selectedList.Title });
             }, function (error) {
 
             });
