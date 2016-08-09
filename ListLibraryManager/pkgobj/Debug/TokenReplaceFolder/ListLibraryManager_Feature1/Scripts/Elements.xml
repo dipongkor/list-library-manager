@@ -42,5 +42,19 @@
     <File Path="Scripts\App\controllers\listDetails.js" Url="Scripts/App/controllers/listDetails.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\filters\booleanToText.js" Url="Scripts/App/filters/booleanToText.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\controllers\listEdit.js" Url="Scripts/App/controllers/listEdit.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\listClear.js" Url="Scripts/App/controllers/listClear.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\removeColumn.js" Url="Scripts/App/controllers/removeColumn.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\addColumn.js" Url="Scripts/App/controllers/addColumn.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\text.js" Url="Scripts/App/controllers/add-columns/text.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\services\fieldUtility.js" Url="Scripts/App/services/fieldUtility.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\note.js" Url="Scripts/App/controllers/add-columns/note.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\choice.js" Url="Scripts/App/controllers/add-columns/choice.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\multiChoice.js" Url="Scripts/App/controllers/add-columns/multiChoice.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\number.js" Url="Scripts/App/controllers/add-columns/number.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\dateTime.js" Url="Scripts/App/controllers/add-columns/dateTime.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\boolean.js" Url="Scripts/App/controllers/add-columns/boolean.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\user.js" Url="Scripts/App/controllers/add-columns/user.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\hyperlink.js" Url="Scripts/App/controllers/add-columns/hyperlink.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\add-columns\lookup.js" Url="Scripts/App/controllers/add-columns/lookup.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -29,5 +29,15 @@
 
             });
         };
+
+        vm.clearData = function () {
+            listLibraryManagerSvc
+                .clearAllItems(vm.listName)
+            .then(function (response) {
+                console.log(response);
+            }, function (error) {
+                console.log(error);
+            });
+        };
     }
 })();

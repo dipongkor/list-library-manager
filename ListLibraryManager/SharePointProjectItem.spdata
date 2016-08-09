@@ -12,5 +12,17 @@
     <ProjectItemFile Source="Templates\directives\navigation.html" Target="Templates\directives\" Type="ElementFile" />
     <ProjectItemFile Source="Templates\list\list-details.html" Target="Templates\list\" Type="ElementFile" />
     <ProjectItemFile Source="Templates\list\list-edit.html" Target="Templates\list\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\remove-column.html" Target="Templates\list\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\add-column.html" Target="Templates\list\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\text.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\note.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\choice.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\multi-choice.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\number.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\date-time.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\boolean.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\user.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\hyperlink.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\columns\lookup.html" Target="Templates\list\columns\" Type="ElementFile" />
   </Files>
 </ProjectItem>

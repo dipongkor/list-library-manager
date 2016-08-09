@@ -35,8 +35,21 @@
     <script src="../Scripts/App/controllers/listsByTemplate.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/listDetails.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/listEdit.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/removeColumn.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/addColumn.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/text.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/note.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/choice.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/multiChoice.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/number.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/dateTime.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/boolean.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/user.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/hyperlink.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/add-columns/lookup.js" type="text/javascript"></script>
      <!-- Services -->
     <script src="../Scripts/App/services/listLibraryManager.js" type="text/javascript"></script>
+    <script src="../Scripts/App/services/fieldUtility.js" type="text/javascript"></script>
 
      <!-- Directives -->
     <script src="../Scripts/App/directives/navigation.js" type="text/javascript"></script>

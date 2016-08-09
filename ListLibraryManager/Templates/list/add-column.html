@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <h1>Add Column in {{vm.listName}}</h1>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Select Column Type</label>
+                    <select ng-model="vm.selectedType"
+                            data-ng-change="vm.typeOnchange(vm.selectedType)"
+                            class="form-control"
+                            ng-options="type as type.title for type in vm.columnTypes"></select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    Existing Columns
+                </th>
+            </tr>
+            <tr data-ng-repeat="col in vm.editableFields">
+                <td>{{col.Title}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

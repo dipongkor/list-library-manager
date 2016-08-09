@@ -11,5 +11,17 @@
     <File Path="Templates\directives\navigation.html" Url="Templates/directives/navigation.html" ReplaceContent="TRUE" />
     <File Path="Templates\list\list-details.html" Url="Templates/list/list-details.html" ReplaceContent="TRUE" />
     <File Path="Templates\list\list-edit.html" Url="Templates/list/list-edit.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\remove-column.html" Url="Templates/list/remove-column.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\add-column.html" Url="Templates/list/add-column.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\text.html" Url="Templates/list/columns/text.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\note.html" Url="Templates/list/columns/note.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\choice.html" Url="Templates/list/columns/choice.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\multi-choice.html" Url="Templates/list/columns/multi-choice.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\number.html" Url="Templates/list/columns/number.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\date-time.html" Url="Templates/list/columns/date-time.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\boolean.html" Url="Templates/list/columns/boolean.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\user.html" Url="Templates/list/columns/user.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\hyperlink.html" Url="Templates/list/columns/hyperlink.html" ReplaceContent="TRUE" />
+    <File Path="Templates\list\columns\lookup.html" Url="Templates/list/columns/lookup.html" ReplaceContent="TRUE" />
   </Module>
 </Elements>

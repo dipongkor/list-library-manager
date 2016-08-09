@@ -43,5 +43,19 @@
     <ProjectItemFile Source="App\controllers\listDetails.js" Target="Scripts\App\controllers\" Type="ElementFile" />
     <ProjectItemFile Source="App\filters\booleanToText.js" Target="Scripts\App\filters\" Type="ElementFile" />
     <ProjectItemFile Source="App\controllers\listEdit.js" Target="Scripts\App\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\listClear.js" Target="Scripts\App\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\removeColumn.js" Target="Scripts\App\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\addColumn.js" Target="Scripts\App\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\text.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\services\fieldUtility.js" Target="Scripts\App\services\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\note.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\choice.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\multiChoice.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\number.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\dateTime.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\boolean.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\user.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\hyperlink.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\add-columns\lookup.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
   </Files>
 </ProjectItem>

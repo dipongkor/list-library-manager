@@ -1,0 +1,36 @@
+﻿<div class="form-group">
+    <label class="control-label">Name</label>
+    <input type="text" class="form-control" data-ng-model="vm.column.Title">
+</div>
+<div class="form-group">
+    <label class="control-label">Description</label>
+    <textarea class="form-control col-md-8" data-ng-model="vm.column.Description"></textarea>
+</div>
+<div class="form-group">
+    <label class="control-label">Require that this column contains information</label>
+    <label class="radio-inline">
+        <input type="radio" data-ng-model="vm.column.Required" data-ng-value="true">
+        Yes
+    </label>
+    <label class="radio-inline">
+        <input type="radio" data-ng-model="vm.column.Required" data-ng-value="false">
+        No
+    </label>
+</div>
+<div class="form-group">
+    <label class="control-label">Enforce unique values</label>
+    <label class="radio-inline">
+        <input type="radio" data-ng-model="vm.column.EnforceUniqueValues" data-ng-value="true">
+        Yes
+    </label>
+    <label class="radio-inline">
+        <input type="radio" data-ng-model="vm.column.EnforceUniqueValues" data-ng-value="false">
+        No
+    </label>
+</div>
+
+<div class="form-group">
+    <label class="control-label">Default value</label>
+    <input type="text" class="form-control" data-ng-model="vm.column.DefaultValue" value="0">
+</div>
+<a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.addColumn(vm.column)">Add</a>

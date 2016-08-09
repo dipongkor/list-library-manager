@@ -3,15 +3,21 @@
     angular.module("listLibraryManagerApp")
     .factory("listLibraryManagerSvc", listLibraryManagerSvc);
 
-    listLibraryManagerSvc.$inject = ["spBaseService"];
+    listLibraryManagerSvc.$inject = ["spBaseService", "$q"];
 
-    function listLibraryManagerSvc(spBaseService) {
+    function listLibraryManagerSvc(spBaseService, $q) {
         return {
             getAllListsByTemplateId: getAllListsByTemplateId,
             getAllListTemplates: getAllListTemplates,
             getListById: getListById,
             updateList: updateList,
-            removeList: removeList
+            removeList: removeList,
+            clearAllItems: clearAllItems,
+            getFieldsByContentType: getFieldsByContentType,
+            removeField: removeField,
+            addField: addField,
+            getAllEditableFields: getAllEditableFields,
+            getAllLists: getAllLists
         };
 
         function getAllListsByTemplateId(templateId) {
@@ -27,6 +33,34 @@
         function getListById(listId) {
             var query = String.format("/_api/Web/Lists(guid'{0}')?$expand=ContentTypes&$select=AllowContentTypes,BaseTemplate,ContentTypesEnabled,Description,EnableVersioning,Hidden,ImageUrl,ItemCount,Title,Id", listId);
             return spBaseService.getRequest(query);
+        }
+
+        function clearAllItems(listName) {
+            var deferred = $q.defer();
+            var clientContext = new SP.ClientContext(spBaseService.baseUrl),
+            list = clientContext.get_web().get_lists().getByTitle('SpNgList'),
+            query = new SP.CamlQuery(),
+            items = list.getItems(query);
+            clientContext.load(items, "Include(Id)");
+            clientContext.executeQueryAsync(function () {
+                var enumerator = items.getEnumerator(),
+                    simpleArray = [];
+                while (enumerator.moveNext()) {
+                    simpleArray.push(enumerator.get_current());
+                }
+                for (var s in simpleArray) {
+                    simpleArray[s].deleteObject();
+                }
+                clientContext.executeQueryAsync(function () {
+                    deferred.resolve("done");
+                }, function () {
+                    deferred.reject("error");
+                });
+            }, function () {
+                deferred.reject("error");
+            });
+
+            return deferred.promise;
         }
 
         function updateList(list) {
@@ -46,6 +80,30 @@
         function removeList(listId) {
             var url = String.format("/_api/Web/Lists(guid'{0}')", listId);
             return spBaseService.deleteRequest(url);
+        }
+
+        function getFieldsByContentType(selectedContentType) {
+            var query = selectedContentType.Fields.__deferred.uri;
+            return spBaseService.getRequest(null, query);
+        }
+
+        function getAllEditableFields(listId) {
+            var query = String.format("/_api/Web/Lists(guid'{0}')/Fields?$filter=CanBeDeleted eq true", listId);
+            return spBaseService.getRequest(query);
+        }
+
+        function getAllLists() {
+            var query = "/_api/Web/Lists?$select=Title,Id";
+            return spBaseService.getRequest(query);
+        }
+
+        function removeField(field) {
+            return spBaseService.deleteRequest(null, field.__metadata.uri);
+        }
+
+        function addField(fieldInfo, listId) {
+            var url = String.format("/_api/Web/Lists(guid'{0}')/Fields", listId);
+            return spBaseService.postRequest(fieldInfo, url);
         }
     }
 })();
