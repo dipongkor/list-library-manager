@@ -20,43 +20,14 @@
             FieldTypeKind: fieldInfo.fieldTypeKind
         };
 
-        var schemaXml = "<Field \
-                                Type=\"MultiChoice\" \
-                                FillInChoice=\"{0}\" \>\
-                                <Default>{1}</Default>\
-                                <CHOICES>{2}\
-                                </CHOICES>\
-                    </Field>";
-
         vm.addColumn = function (field) {
-            //field.Indexed = field.EnforceUniqueValues;
-            //field.Choices = {
-            //    results: field.Choices.split("\n")
-            //};
-
-            var choices = field.Choices.split("\n");
-
-            choices.forEach(function (choice) {
-                choice = String.format("<CHOICE>{0}</CHOICE>", choice);
-            });
-
-
-
-            var data = {
-                __metadata: {
-                    type: fieldInfo.type
-                },
-                FieldTypeKind: fieldInfo.fieldTypeKind,
-               // EnforceUniqueValues: field.EnforceUniqueValues,
-                //Indexed: field.EnforceUniqueValues,
-                SchemaXml: String.format(schemaXml, field.FillInChoice.toString().toUpperCase(), field.DefaultValue, choices.join("")),
-                Title: field.Title,
-                //Description: field.Description,
-                //Required: field.Required
+            var choices = vm.choicesAsText.split("\n");
+            field.Choices = {
+                __metadata: { type: 'Collection(Edm.String)' },
+                results: choices
             };
-
             listLibraryManagerSvc
-                .addField(data, vm.listId)
+                .addField(field, vm.listId)
             .then(function (response) {
                 $state.go("app.addColumn", $stateParams);
             }, function (error) {

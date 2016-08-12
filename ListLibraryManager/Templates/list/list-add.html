@@ -1,0 +1,17 @@
+﻿<div class="col-md-12">
+    <ol class="breadcrumb">
+        <li>{{vm.listTemplate}}</li>
+        <li class="active">Add New</li>
+    </ol>
+    <div>
+        <div class="form-group">
+            <label class="control-label">Title</label>
+            <input type="text" class="form-control" data-ng-model="vm.newList.Title">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Description</label>
+            <textarea class="form-control col-md-8" data-ng-model="vm.newList.Description"></textarea>
+        </div>
+        <a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.updateList(vm.newList)">Done</a>
+    </div>
+</div>

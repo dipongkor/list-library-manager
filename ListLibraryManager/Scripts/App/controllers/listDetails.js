@@ -10,6 +10,7 @@
 
         var listId = $stateParams.listId;
         vm.listName = $stateParams.listName;
+        vm.listTemplate = $stateParams.listTemplate;
 
         listLibraryManagerSvc
             .getListById(listId)

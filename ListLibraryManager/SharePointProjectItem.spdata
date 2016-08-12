@@ -24,5 +24,6 @@
     <ProjectItemFile Source="Templates\list\columns\user.html" Target="Templates\list\columns\" Type="ElementFile" />
     <ProjectItemFile Source="Templates\list\columns\hyperlink.html" Target="Templates\list\columns\" Type="ElementFile" />
     <ProjectItemFile Source="Templates\list\columns\lookup.html" Target="Templates\list\columns\" Type="ElementFile" />
+    <ProjectItemFile Source="Templates\list\list-add.html" Target="Templates\list\" Type="ElementFile" />
   </Files>
 </ProjectItem>

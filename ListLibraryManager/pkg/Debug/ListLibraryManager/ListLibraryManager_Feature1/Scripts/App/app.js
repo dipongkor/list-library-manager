@@ -33,7 +33,7 @@
             controllerAs: "vm"
         })
         .state("app.list", {
-            url: "/list/{listId}/{listName}",
+            url: "/list/{listTemplate}/{listId}/{listName}",
             templateUrl: "../Templates/list/list-details.html",
             controller: "listDetailsCtrl",
             controllerAs: "vm"

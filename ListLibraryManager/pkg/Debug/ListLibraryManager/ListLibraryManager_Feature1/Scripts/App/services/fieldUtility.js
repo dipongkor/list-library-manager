@@ -58,7 +58,7 @@
                 name: "Lookup",
                 title: "Lookup (information already on this site)",
                 sref: "app.addColumn.lookup",
-                type: "SP.FieldLookup",
+                type: "SP.FieldCreationInformation",
                 fieldTypeKind: 7
             },
             {

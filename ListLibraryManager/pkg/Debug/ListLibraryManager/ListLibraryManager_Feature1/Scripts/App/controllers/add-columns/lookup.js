@@ -11,7 +11,7 @@
         vm.listName = $stateParams.listName;
         vm.lookupLists = [];
 
-        var fieldInfo = fieldUtilitySvc.getFieldByName("URL");
+        var fieldInfo = fieldUtilitySvc.getFieldByName("Lookup");
 
         vm.column = {
             __metadata: {
@@ -30,10 +30,18 @@
 
 
         vm.addColumn = function (field) {
-            field.Indexed = field.EnforceUniqueValues;
-            field.LookupList = vm.lookupList.Id;
+            var data = {
+                parameters: {
+                    __metadata: { type: SP.FieldCreationInformation },
+                    FieldTypeKind: fieldInfo.fieldTypeKind,
+                    Title: field.Title,
+                    LookupListId: vm.lookupList.Id,
+                    LookupFieldName: field.LookupField,
+                    Required: field.Required
+                }
+            };
             listLibraryManagerSvc
-                .addField(field, vm.listId)
+                .addLookupField(data, vm.listId)
             .then(function (response) {
                 $state.go("app.addColumn", $stateParams);
             }, function (error) {
@@ -42,3 +50,5 @@
         };
     }
 })();
+
+//https://msdn.microsoft.com/en-us/library/office/dn600182.aspx#bk_FieldLookup

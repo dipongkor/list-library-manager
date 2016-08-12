@@ -57,5 +57,6 @@
     <ProjectItemFile Source="App\controllers\add-columns\user.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
     <ProjectItemFile Source="App\controllers\add-columns\hyperlink.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
     <ProjectItemFile Source="App\controllers\add-columns\lookup.js" Target="Scripts\App\controllers\add-columns\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\listAdd.js" Target="Scripts\App\controllers\" Type="ElementFile" />
   </Files>
 </ProjectItem>

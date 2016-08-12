@@ -1,30 +1,41 @@
 ﻿<div class="col-md-12">
-    <h1>Remove Column</h1>
-    <div class="form-group">
-        <label class="control-label col-md-4">Select Content Type</label>
+    <ol class="breadcrumb">
+        <li>{{vm.listName}}</li>
+        <li class="active">Remove Column</li>
+    </ol>
+    <div class="row">
         <div class="col-md-8">
-            <select ng-model="vm.selectedContentType"
-                    data-ng-change="vm.contentTypeOnchange(vm.selectedContentType)"
-                    class="form-control"
-                    ng-options="contentType as contentType.Name for contentType in vm.contentTypes"></select>
-        </div>
+            <div class="form-group">
+                <label class="control-label">Select Content Type</label>
 
-        <table style="width:auto;" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Index</th>
-                    <th>Title</th>
-                    <th>Type</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-ng-repeat="field in vm.selectedContentType.allFields" class="item" style="cursor: move;">
-                    <td>{{$index + 1}}</td>
-                    <td>{{field.Title}}</td>
-                    <td>{{field.TypeDisplayName}}</td>
-                    <td><a href="javascript:void(0)" data-ng-if="field.CanBeDeleted" data-ng-click="vm.removeColumn(field)">Delete</a></td>
-                </tr>
-            </tbody>
-</div>
+                <select ng-model="vm.selectedContentType"
+                        data-ng-change="vm.contentTypeOnchange(vm.selectedContentType)"
+                        class="form-control"
+                        ng-options="contentType as contentType.Name for contentType in vm.contentTypes"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="field in vm.selectedContentType.allFields" class="item" style="cursor: move;">
+                        <td>{{$index + 1}}</td>
+                        <td>{{field.Title}}</td>
+                        <td>{{field.TypeDisplayName}}</td>
+                        <td><a href="javascript:void(0)" data-ng-if="field.CanBeDeleted" data-ng-click="vm.removeColumn(field)">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

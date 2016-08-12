@@ -1,21 +1,19 @@
 ﻿<div class="col-md-12">
-    <h1>Edit {{vm.listName}}</h1>
-    <div class="form-horizontal">
+    <ol class="breadcrumb">
+        <li>{{vm.listName}}</li>
+        <li class="active">Edit Properties</li>
+    </ol>
+    <div>
         <div class="form-group">
-            <label class="control-label col-md-4">Name</label>
-            <div class="col-md-8">
+            <label class="control-label">Name</label>
                 <input type="text" class="form-control" data-ng-model="vm.selectedList.Title">
-            </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-4">Description</label>
-            <div class="col-md-8">
+            <label class="control-label">Description</label>
                 <textarea class="form-control col-md-8" data-ng-model="vm.selectedList.Description"></textarea>
-            </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-4">Allow management of content types</label>
-            <div class="col-md-8">
+            <label class="control-label">Allow management of content types</label>
                 <label class="radio-inline">
                     <input type="radio" data-ng-model="vm.selectedList.ContentTypesEnabled" data-ng-value="true">
                     Yes
@@ -24,11 +22,9 @@
                     <input type="radio" data-ng-model="vm.selectedList.ContentTypesEnabled" data-ng-value="false">
                     No
                 </label>
-            </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-4">Versioning Enabled</label>
-            <div class="col-md-8">
+            <label class="control-label">Versioning Enabled</label>
                 <label class="radio-inline">
                     <input type="radio" data-ng-model="vm.selectedList.EnableVersioning" data-ng-value="true">
                     Yes
@@ -37,11 +33,9 @@
                     <input type="radio" data-ng-model="vm.selectedList.EnableVersioning" data-ng-value="false">
                     No
                 </label>
-            </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-4">Hidden</label>
-            <div class="col-md-8">
+            <label class="control-label">Hidden</label>
                 <label class="radio-inline">
                     <input type="radio" data-ng-model="vm.selectedList.Hidden" data-ng-value="true">
                     Yes
@@ -50,9 +44,7 @@
                     <input type="radio" data-ng-model="vm.selectedList.Hidden" data-ng-value="false">
                     No
                 </label>
-            </div>
         </div>
         <a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.updateList(vm.selectedList)">Done</a>
-
     </div>
 </div>

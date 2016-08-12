@@ -30,10 +30,18 @@
 
 
         vm.addColumn = function (field) {
-            field.Indexed = field.EnforceUniqueValues;
-            field.LookupList = vm.lookupList.Id;
+            var data = {
+                parameters: {
+                    __metadata: { type: SP.FieldCreationInformation },
+                    FieldTypeKind: fieldInfo.fieldTypeKind,
+                    Title: field.Title,
+                    LookupListId: vm.lookupList.Id,
+                    LookupFieldName: field.LookupField,
+                    Required: field.Required
+                }
+            };
             listLibraryManagerSvc
-                .addField(field, vm.listId)
+                .addLookupField(data, vm.listId)
             .then(function (response) {
                 $state.go("app.addColumn", $stateParams);
             }, function (error) {
