@@ -33,15 +33,15 @@
             controllerAs: "vm"
         })
         .state("app.list", {
-            url: "/list/{listTemplate}/{listId}/{listName}",
+            url: "/list/details/{listTemplate}/{listId}/{listName}",
             templateUrl: "../Templates/list/list-details.html",
             controller: "listDetailsCtrl",
             controllerAs: "vm"
         })
         .state("app.listAdd", {
-            url: "/list/{listTemplate}/{templateId}",
-            templateUrl: "../Templates/list/list-details.html",
-            controller: "listDetailsCtrl",
+            url: "/list/add/{listTemplate}/{templateId}",
+            templateUrl: "../Templates/list/list-add.html",
+            controller: "listAddCtrl",
             controllerAs: "vm"
         })
         .state("app.listEdit", {

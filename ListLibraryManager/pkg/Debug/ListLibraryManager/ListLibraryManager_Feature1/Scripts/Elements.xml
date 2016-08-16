@@ -56,5 +56,6 @@
     <File Path="Scripts\App\controllers\add-columns\user.js" Url="Scripts/App/controllers/add-columns/user.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\controllers\add-columns\hyperlink.js" Url="Scripts/App/controllers/add-columns/hyperlink.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\controllers\add-columns\lookup.js" Url="Scripts/App/controllers/add-columns/lookup.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\listAdd.js" Url="Scripts/App/controllers/listAdd.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -1,7 +1,7 @@
-﻿<div class="form-group">
-        <label class="control-label">Name</label>
-    <input type="text" class="form-control" data-ng-model="vm.column.Title">
-    </div>
+﻿<div class="form-group" ng-class="{ 'has-error' : addColumnForm.title.$invalid}">
+    <label class="control-label">Name</label>
+    <input type="text" class="form-control" data-ng-model="vm.column.Title" name="title" required>
+</div>
     <div class="form-group">
         <label class="control-label">Description</label>
         <textarea class="form-control col-md-8" data-ng-model="vm.column.Description"></textarea>
@@ -36,4 +36,4 @@
         <label class="control-label">Default value</label>        
         <input type="text" class="form-control" data-ng-model="vm.column.DefaultValue">
     </div>
-    <a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.addColumn(vm.column)">Add</a>
+    <a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.addColumn(vm.column)" ng-disabled="addColumnForm.$invalid">Add</a>

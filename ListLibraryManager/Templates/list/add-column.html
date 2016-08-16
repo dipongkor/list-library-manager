@@ -1,6 +1,6 @@
 ﻿<div class="row">
     <ol class="breadcrumb">
-        <li>{{vm.listName}}</li>
+        <li><a href="javascript: history.go(-1)">{{vm.listName}}</a></li>
         <li class="active">Add Column</li>
     </ol>
     <div class="col-md-4">
@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div ui-view></div>
+                <div ui-view ng-form="addColumnForm" novalidate></div>
             </div>
         </div>
     </div>

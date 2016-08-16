@@ -16,7 +16,9 @@
             __metadata: {
                 type: fieldInfo.type
             },
-            FieldTypeKind: fieldInfo.fieldTypeKind
+            FieldTypeKind: fieldInfo.fieldTypeKind,
+            Required: false,
+            EnforceUniqueValues: false
         };
         
 

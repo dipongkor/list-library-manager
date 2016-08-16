@@ -62,6 +62,7 @@
     <Content Include="Scripts\App\controllers\add-columns\text.js" />
     <Content Include="Scripts\App\controllers\add-columns\user.js" />
     <Content Include="Scripts\App\controllers\addColumn.js" />
+    <Content Include="Scripts\App\controllers\listAdd.js" />
     <Content Include="Scripts\App\controllers\removeColumn.js" />
     <Content Include="Scripts\App\controllers\home.js" />
     <Content Include="Scripts\App\controllers\listClear.js" />
@@ -89,6 +90,7 @@
     <Content Include="Templates\list\columns\number.html" />
     <Content Include="Templates\list\columns\text.html" />
     <Content Include="Templates\list\columns\user.html" />
+    <Content Include="Templates\list\list-add.html" />
     <Content Include="Templates\list\list-details.html" />
     <Content Include="Templates\list\list-edit.html" />
     <Content Include="Templates\list\remove-column.html" />

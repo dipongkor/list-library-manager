@@ -18,7 +18,8 @@
             addField: addField,
             getAllEditableFields: getAllEditableFields,
             getAllLists: getAllLists,
-            addLookupField: addLookupField
+            addLookupField: addLookupField,
+            addNewList: addNewList
         };
 
         function getAllListsByTemplateId(templateId) {
@@ -110,6 +111,11 @@
         function addLookupField(fieldInfo, listId) {
             var url = String.format("/_api/Web/Lists(guid'{0}')/Fields/addfield", listId);
             return spBaseService.postRequest(fieldInfo, url);
+        }
+
+        function addNewList(newList) {
+            var url = "/_api/web/lists";
+            return spBaseService.postRequest(newList, url);
         }
     }
 })();

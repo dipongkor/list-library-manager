@@ -34,6 +34,7 @@
     <script src="../Scripts/App/controllers/main.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/listsByTemplate.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/listDetails.js" type="text/javascript"></script>
+    <script src="../Scripts/App/controllers/listAdd.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/listEdit.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/removeColumn.js" type="text/javascript"></script>
     <script src="../Scripts/App/controllers/addColumn.js" type="text/javascript"></script>
