@@ -3,9 +3,9 @@
     angular.module("listLibraryManagerApp")
     .factory("listLibraryManagerSvc", listLibraryManagerSvc);
 
-    listLibraryManagerSvc.$inject = ["spBaseService", "$q"];
+    listLibraryManagerSvc.$inject = ["spBaseService", "$q", "toaster"];
 
-    function listLibraryManagerSvc(spBaseService, $q) {
+    function listLibraryManagerSvc(spBaseService, $q, toaster) {
         return {
             getAllListsByTemplateId: getAllListsByTemplateId,
             getAllListTemplates: getAllListTemplates,
@@ -19,7 +19,8 @@
             getAllEditableFields: getAllEditableFields,
             getAllLists: getAllLists,
             addLookupField: addLookupField,
-            addNewList: addNewList
+            addNewList: addNewList,
+            toast: toast
         };
 
         function getAllListsByTemplateId(templateId) {
@@ -38,31 +39,31 @@
         }
 
         function clearAllItems(listName) {
-            var deferred = $q.defer();
-            var clientContext = new SP.ClientContext(spBaseService.baseUrl),
-            list = clientContext.get_web().get_lists().getByTitle('SpNgList'),
-            query = new SP.CamlQuery(),
-            items = list.getItems(query);
-            clientContext.load(items, "Include(Id)");
-            clientContext.executeQueryAsync(function () {
-                var enumerator = items.getEnumerator(),
-                    simpleArray = [];
-                while (enumerator.moveNext()) {
-                    simpleArray.push(enumerator.get_current());
-                }
-                for (var s in simpleArray) {
-                    simpleArray[s].deleteObject();
-                }
-                clientContext.executeQueryAsync(function () {
-                    deferred.resolve("done");
-                }, function () {
-                    deferred.reject("error");
-                });
-            }, function () {
-                deferred.reject("error");
+            
+            return new Promise(function (resolve, reject) {
+                var clientContext = new SP.ClientContext(spBaseService.baseUrl),
+                    list = clientContext.get_web().get_lists().getByTitle(listName),
+                    query = new SP.CamlQuery(),
+                    items = list.getItems(query);
+                        clientContext.load(items, "Include(Id)");
+                        clientContext.executeQueryAsync(function () {
+                            var enumerator = items.getEnumerator(),
+                                simpleArray = [];
+                            while (enumerator.moveNext()) {
+                                simpleArray.push(enumerator.get_current());
+                            }
+                            for (var s in simpleArray) {
+                                simpleArray[s].deleteObject();
+                            }
+                            clientContext.executeQueryAsync(function () {
+                                resolve("done");
+                            }, function (sender, args) {
+                                reject(args.get_message());
+                            });
+                        }, function (sender, args) {
+                            reject(args.get_message());
+                        });
             });
-
-            return deferred.promise;
         }
 
         function updateList(list) {
@@ -116,6 +117,14 @@
         function addNewList(newList) {
             var url = "/_api/web/lists";
             return spBaseService.postRequest(newList, url);
+        }
+
+        function toast(type, message) {
+            toaster.pop({
+                type: type,
+                title: "List/Library Manager says",
+                body: message
+            });
         }
     }
 })();

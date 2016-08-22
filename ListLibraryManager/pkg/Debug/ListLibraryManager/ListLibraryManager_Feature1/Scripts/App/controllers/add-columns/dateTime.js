@@ -3,9 +3,9 @@
     angular.module("listLibraryManagerApp")
    .controller("dateTimeCtrl", dateTimeCtrl);
 
-    dateTimeCtrl.$inject = ["listLibraryManagerSvc", "fieldUtilitySvc", "$stateParams", "$state"];
+    dateTimeCtrl.$inject = ["listLibraryManagerSvc", "fieldUtilitySvc", "$stateParams", "$state", "eventService"];
 
-    function dateTimeCtrl(listLibraryManagerSvc, fieldUtilitySvc, $stateParams, $state) {
+    function dateTimeCtrl(listLibraryManagerSvc, fieldUtilitySvc, $stateParams, $state, eventService) {
 
         var vm = this;
         vm.listId = $stateParams.listId;
@@ -26,9 +26,11 @@
             listLibraryManagerSvc
                 .addField(field, vm.listId)
             .then(function (response) {
+                listLibraryManagerSvc.toast("success", "New column has been added successfully.");
+                eventService.trigger("newColumnAdded", response.d);
                 $state.go("app.addColumn", $stateParams);
             }, function (error) {
-                console.log(error);
+                listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });
         };
     }

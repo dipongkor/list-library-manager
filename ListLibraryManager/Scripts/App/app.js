@@ -4,13 +4,17 @@
         "spNgModule",
         "angular-loading-bar",
         "ngAnimate",
-        "ui.router"])
+        "ui.router",
+        "ui.bootstrap",
+        "angular-confirm",
+        "toaster"])
     .constant("IS_APP_WEB", false)
     .config(config);
 
-    config.$inject = ["$stateProvider", "$urlRouterProvider"];
+    config.$inject = ["$stateProvider", "$urlRouterProvider", "cfpLoadingBarProvider"];
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
+        
         $urlRouterProvider.otherwise('/app/home');
 
         $stateProvider
@@ -60,6 +64,12 @@
             url: "/remove/column/{listId}/{listName}",
             templateUrl: "../Templates/list/remove-column.html",
             controller: "removeColumnCtrl",
+            controllerAs: "vm"
+        })
+        .state("app.reorderColumn", {
+            url: "/reorder/column/{listId}/{listName}",
+            templateUrl: "../Templates/reorder-column.html",
+            controller: "reorderColumnCtrl",
             controllerAs: "vm"
         })
         .state("app.addColumn", {

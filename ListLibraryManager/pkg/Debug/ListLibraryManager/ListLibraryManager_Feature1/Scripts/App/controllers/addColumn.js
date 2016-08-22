@@ -3,9 +3,9 @@
     angular.module("listLibraryManagerApp")
     .controller("addColumnCtrl", addColumnCtrl);
 
-    addColumnCtrl.$inject = ["listLibraryManagerSvc", "fieldUtilitySvc", "$stateParams", "$state"];
+    addColumnCtrl.$inject = ["listLibraryManagerSvc", "fieldUtilitySvc", "$stateParams", "$state", "eventService"];
 
-    function addColumnCtrl(listLibraryManagerSvc, fieldUtilitySvc, $stateParams, $state) {
+    function addColumnCtrl(listLibraryManagerSvc, fieldUtilitySvc, $stateParams, $state, eventService) {
         var vm = this;
         vm.listName = $stateParams.listName;
         var listId = $stateParams.listId;
@@ -24,5 +24,10 @@
         };
 
         vm.columnTypes = fieldUtilitySvc.fields;
+
+        eventService.on("newColumnAdded", function (data,newColumn) {
+            vm.editableFields.push(newColumn);
+            vm.selectedType = null;
+        });
     }
 })();

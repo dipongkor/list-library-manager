@@ -25,8 +25,9 @@
                 .updateList(selectedList)
             .then(function (data) {
                 $state.go("app.list", { listId: selectedList.Id, listName: selectedList.Title });
+                listLibraryManagerSvc.toast("success", String.format("{0} has been updated successfully", selectedList.Title));
             }, function (error) {
-
+                listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });
         };
     }

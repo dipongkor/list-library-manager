@@ -47,8 +47,10 @@
   <ItemGroup>
     <Content Include="Content\loading-bar.css" />
     <Content Include="Content\loading-bar.min.css" />
+    <Content Include="Content\toaster.min.css" />
     <Content Include="Scripts\angular-aria.js" />
     <Content Include="Scripts\angular-aria.min.js" />
+    <Content Include="Scripts\angular-confirm.min.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\App\controllers\add-columns\boolean.js" />
@@ -70,12 +72,15 @@
     <Content Include="Scripts\App\controllers\listEdit.js" />
     <Content Include="Scripts\App\controllers\listsByTemplate.js" />
     <Content Include="Scripts\App\controllers\main.js" />
+    <Content Include="Scripts\App\controllers\reorder-column.js" />
     <Content Include="Scripts\App\directives\navigation.js" />
     <Content Include="Scripts\App\filters\booleanToText.js" />
+    <Content Include="Scripts\App\services\event.js" />
     <Content Include="Scripts\App\services\fieldUtility.js" />
     <Content Include="Scripts\App\services\listLibraryManager.js" />
     <Content Include="Scripts\loading-bar.js" />
     <Content Include="Scripts\loading-bar.min.js" />
+    <Content Include="Scripts\toaster.min.js" />
     <Content Include="Templates\allListsByTemplate.html" />
     <Content Include="Templates\directives\navigation.html" />
     <Content Include="Templates\home.html" />
@@ -95,6 +100,7 @@
     <Content Include="Templates\list\list-edit.html" />
     <Content Include="Templates\list\remove-column.html" />
     <Content Include="Templates\main.html" />
+    <Content Include="Templates\reorder-column.html" />
     <Content Include="Views\Elements.xml" />
     <Content Include="Views\Sample.txt" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />

@@ -57,5 +57,9 @@
     <File Path="Scripts\App\controllers\add-columns\hyperlink.js" Url="Scripts/App/controllers/add-columns/hyperlink.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\controllers\add-columns\lookup.js" Url="Scripts/App/controllers/add-columns/lookup.js" ReplaceContent="TRUE" />
     <File Path="Scripts\App\controllers\listAdd.js" Url="Scripts/App/controllers/listAdd.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-confirm.min.js" Url="Scripts/angular-confirm.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\toaster.min.js" Url="Scripts/toaster.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\services\event.js" Url="Scripts/App/services/event.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\controllers\reorder-column.js" Url="Scripts/App/controllers/reorder-column.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

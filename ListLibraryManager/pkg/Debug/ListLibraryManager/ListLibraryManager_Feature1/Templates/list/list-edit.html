@@ -1,6 +1,6 @@
 ﻿<div class="col-md-12">
     <ol class="breadcrumb">
-        <li>{{vm.listName}}</li>
+        <li><a ui-sref="app.list({ listId: vm.selectedList.Id, listName: vm.selectedList.Title })">{{vm.listName}}</a></li>
         <li class="active">Edit Properties</li>
     </ol>
     <div ng-form="editListForm" novalidate>

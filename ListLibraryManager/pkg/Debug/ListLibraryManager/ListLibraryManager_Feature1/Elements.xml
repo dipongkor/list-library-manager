@@ -24,5 +24,6 @@
     <File Path="Templates\list\columns\hyperlink.html" Url="Templates/list/columns/hyperlink.html" ReplaceContent="TRUE" />
     <File Path="Templates\list\columns\lookup.html" Url="Templates/list/columns/lookup.html" ReplaceContent="TRUE" />
     <File Path="Templates\list\list-add.html" Url="Templates/list/list-add.html" ReplaceContent="TRUE" />
+    <File Path="Templates\reorder-column.html" Url="Templates/reorder-column.html" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -60,6 +60,10 @@
     <ElementFile Location="Scripts\App\controllers\add-columns\hyperlink.js" />
     <ElementFile Location="Scripts\App\controllers\add-columns\lookup.js" />
     <ElementFile Location="Scripts\App\controllers\listAdd.js" />
+    <ElementFile Location="Scripts\angular-confirm.min.js" />
+    <ElementFile Location="Scripts\toaster.min.js" />
+    <ElementFile Location="Scripts\App\services\event.js" />
+    <ElementFile Location="Scripts\App\controllers\reorder-column.js" />
     <ElementManifest Location="Content\Elements.xml" />
     <ElementFile Location="Content\App.css" />
     <ElementFile Location="Content\ui-bootstrap-csp.css" />
@@ -69,6 +73,7 @@
     <ElementFile Location="Content\bootstrap.css" />
     <ElementFile Location="Content\loading-bar.min.css" />
     <ElementFile Location="Content\loading-bar.css" />
+    <ElementFile Location="Content\toaster.min.css" />
     <ElementManifest Location="Images\Elements.xml" />
     <ElementFile Location="Images\AppIcon.png" />
     <ElementManifest Location="Elements.xml" />
@@ -95,6 +100,7 @@
     <ElementFile Location="Templates\list\columns\hyperlink.html" />
     <ElementFile Location="Templates\list\columns\lookup.html" />
     <ElementFile Location="Templates\list\list-add.html" />
+    <ElementFile Location="Templates\reorder-column.html" />
     <ElementManifest Location="Views\Elements.xml" />
     <ElementFile Location="Views\Sample.txt" />
   </ElementManifests>
