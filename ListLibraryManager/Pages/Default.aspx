@@ -58,6 +58,7 @@
     <script src="../Scripts/App/services/listLibraryManager.js" type="text/javascript"></script>
     <script src="../Scripts/App/services/fieldUtility.js" type="text/javascript"></script>
     <script src="../Scripts/App/services/event.js"></script>
+    <script src="../Scripts/App/services/templateUtility.js"></script>
 
      <!-- Directives -->
     <script src="../Scripts/App/directives/navigation.js" type="text/javascript"></script>

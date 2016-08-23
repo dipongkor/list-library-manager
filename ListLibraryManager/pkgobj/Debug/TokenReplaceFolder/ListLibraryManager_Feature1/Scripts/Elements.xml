@@ -64,5 +64,6 @@
     <File Path="Scripts\jquery-1.12.4.intellisense.js" Url="Scripts/jquery-1.12.4.intellisense.js" ReplaceContent="TRUE" />
     <File Path="Scripts\jquery-ui-1.12.0.min.js" Url="Scripts/jquery-ui-1.12.0.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\jquery-ui-1.12.0.js" Url="Scripts/jquery-ui-1.12.0.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\App\services\templateUtility.js" Url="Scripts/App/services/templateUtility.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

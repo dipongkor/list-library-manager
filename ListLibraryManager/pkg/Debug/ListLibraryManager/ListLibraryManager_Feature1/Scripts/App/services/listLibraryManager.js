@@ -96,8 +96,11 @@
             return spBaseService.getRequest(query);
         }
 
-        function getAllLists() {
-            var query = "/_api/Web/Lists?$select=Title,Id";
+        function getAllLists(searchKey) {
+            var query = "/_api/Web/Lists?$top=10&select=Title,Description,ItemCount,BaseTemplate,Id";
+            if (searchKey) {
+                query += String.format("&$filter=substringof('{0}',Title)", searchKey);
+            }
             return spBaseService.getRequest(query);
         }
 

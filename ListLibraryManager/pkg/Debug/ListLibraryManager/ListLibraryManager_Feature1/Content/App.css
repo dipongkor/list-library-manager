@@ -12,5 +12,19 @@
     cursor:pointer!important;
 }
 
+a.btn-primary:visited {
+    color:white;
+}
+
+#all-lists-header{
+    margin-top:1px;
+}
+a:hover{
+    text-decoration:none!important;
+}
+a:visited{
+    color: #2a6496;
+    text-decoration:none!important;
+}
 
 

@@ -89,6 +89,7 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\toaster.min.css" />
+    <Content Include="Images\SharePointPlex-logo.png" />
     <Content Include="Scripts\angular-aria.js" />
     <Content Include="Scripts\angular-aria.min.js" />
     <Content Include="Scripts\angular-confirm.min.js" />
@@ -120,6 +121,7 @@
     <Content Include="Scripts\App\services\event.js" />
     <Content Include="Scripts\App\services\fieldUtility.js" />
     <Content Include="Scripts\App\services\listLibraryManager.js" />
+    <Content Include="Scripts\App\services\templateUtility.js" />
     <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />

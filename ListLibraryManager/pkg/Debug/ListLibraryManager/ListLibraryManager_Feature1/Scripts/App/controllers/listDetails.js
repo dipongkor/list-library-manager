@@ -15,10 +15,9 @@
         listLibraryManagerSvc
             .getListById(listId)
             .then(function (response) {
-                console.log(response);
                 vm.selectedList = response.d;
-            }, function (error) {
-
+            }, function (errorResponse) {
+                listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });
 
         vm.removeList = function (listId) {
@@ -50,6 +49,7 @@
                         .then(function (response) {
                             listLibraryManagerSvc.toast("success", "All items have been deleted successfylly.");
                             cfpLoadingBar.complete();
+                            vm.selectedList.ItemCount = 0;
                         }, function (error) {
                             listLibraryManagerSvc.toast("error", error);
                             cfpLoadingBar.complete();

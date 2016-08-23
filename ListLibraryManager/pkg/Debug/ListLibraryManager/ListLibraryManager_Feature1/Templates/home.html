@@ -1,1 +1,44 @@
-﻿<h1>Welcome to List/Library Manager</h1>
+﻿<div class="row">
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 id="all-lists-header">All Lists/Libraries</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="form-inline pull-right">
+                    <div class="form-group">
+                        <input type="text" value="" placeholder="Find list or library" class="form-control" data-ng-model="vm.searchText" />
+                    </div>
+                    <a href="" class="btn btn-primary" data-ng-click="vm.findList(vm.searchText)">Go</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Total item</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr data-ng-repeat="list in vm.allLists">
+                        <td>{{list.Title}}</td>
+                        <td>{{list.Description}}</td>
+                        <td>{{list.ItemCount}}</td>
+                        <td>
+                            <a data-ng-click="vm.goToList(list)" href="javascript:void(0)">
+                                <span unselectable="on" class=" ms-cui-img-32by32 ms-cui-img-cont-float">
+                                    <img unselectable="on" alt="" src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -1px; left: -171px;">
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

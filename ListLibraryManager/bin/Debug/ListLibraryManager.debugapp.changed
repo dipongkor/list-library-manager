@@ -1,2 +1,4 @@
-D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\Templates\directives\navigation.html
-D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\Templates\list\list-details.html
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\Scripts\App\controllers\home.js
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\Scripts\App\controllers\main.js
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\Scripts\App\controllers\listDetails.js
+D:\BS SharePoint Portal\SpPlex.Apps\ListLibraryManager\Scripts\App\controllers\listEdit.js

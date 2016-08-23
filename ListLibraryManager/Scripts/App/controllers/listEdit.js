@@ -15,10 +15,9 @@
         listLibraryManagerSvc
             .getListById(listId)
         .then(function (response) {
-            console.log(response);
             vm.selectedList = response.d;
-        }, function (error) {
-
+        }, function (errorResponse) {
+            listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
         });
 
         vm.updateList = function (selectedList) {

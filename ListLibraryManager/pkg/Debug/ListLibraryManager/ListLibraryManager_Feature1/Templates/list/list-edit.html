@@ -1,50 +1,52 @@
-﻿<div class="col-md-12">
-    <ol class="breadcrumb">
-        <li><a ui-sref="app.list({listTemplate: vm.params.listTemplate, listId: vm.params.listId, listName: vm.params.listName})">{{vm.listName}}</a></li>
-        <li class="active">Edit Properties</li>
-    </ol>
-    <div ng-form="editListForm" novalidate>
-        <div class="form-group" ng-class="{ 'has-error' : editListForm.listTitle.$invalid}">
-            <label class="control-label">Name</label>
-            <input type="text" class="form-control" data-ng-model="vm.selectedList.Title" name="listTitle" required>
+﻿<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a ui-sref="app.list({listTemplate: vm.params.listTemplate, listId: vm.params.listId, listName: vm.params.listName})">{{vm.listName}}</a></li>
+            <li class="active">Edit Properties</li>
+        </ol>
+        <div ng-form="editListForm" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : editListForm.listTitle.$invalid}">
+                <label class="control-label">Name</label>
+                <input type="text" class="form-control" data-ng-model="vm.selectedList.Title" name="listTitle" required>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Description</label>
+                <textarea class="form-control col-md-8" data-ng-model="vm.selectedList.Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Allow management of content types</label>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="vm.selectedList.ContentTypesEnabled" data-ng-value="true">
+                    Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="vm.selectedList.ContentTypesEnabled" data-ng-value="false">
+                    No
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Versioning Enabled</label>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="vm.selectedList.EnableVersioning" data-ng-value="true">
+                    Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="vm.selectedList.EnableVersioning" data-ng-value="false">
+                    No
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Hidden</label>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="vm.selectedList.Hidden" data-ng-value="true">
+                    Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" data-ng-model="vm.selectedList.Hidden" data-ng-value="false">
+                    No
+                </label>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.updateList(vm.selectedList)" ng-disabled="editListForm.$invalid">Done</a>
         </div>
-        <div class="form-group">
-            <label class="control-label">Description</label>
-            <textarea class="form-control col-md-8" data-ng-model="vm.selectedList.Description"></textarea>
-        </div>
-        <div class="form-group">
-            <label class="control-label">Allow management of content types</label>
-            <label class="radio-inline">
-                <input type="radio" data-ng-model="vm.selectedList.ContentTypesEnabled" data-ng-value="true">
-                Yes
-            </label>
-            <label class="radio-inline">
-                <input type="radio" data-ng-model="vm.selectedList.ContentTypesEnabled" data-ng-value="false">
-                No
-            </label>
-        </div>
-        <div class="form-group">
-            <label class="control-label">Versioning Enabled</label>
-            <label class="radio-inline">
-                <input type="radio" data-ng-model="vm.selectedList.EnableVersioning" data-ng-value="true">
-                Yes
-            </label>
-            <label class="radio-inline">
-                <input type="radio" data-ng-model="vm.selectedList.EnableVersioning" data-ng-value="false">
-                No
-            </label>
-        </div>
-        <div class="form-group">
-            <label class="control-label">Hidden</label>
-            <label class="radio-inline">
-                <input type="radio" data-ng-model="vm.selectedList.Hidden" data-ng-value="true">
-                Yes
-            </label>
-            <label class="radio-inline">
-                <input type="radio" data-ng-model="vm.selectedList.Hidden" data-ng-value="false">
-                No
-            </label>
-        </div>
-        <a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.updateList(vm.selectedList)" ng-disabled="editListForm.$invalid">Done</a>
     </div>
 </div>

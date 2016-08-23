@@ -67,6 +67,7 @@
     <ElementFile Location="Scripts\jquery-1.12.4.intellisense.js" />
     <ElementFile Location="Scripts\jquery-ui-1.12.0.min.js" />
     <ElementFile Location="Scripts\jquery-ui-1.12.0.js" />
+    <ElementFile Location="Scripts\App\services\templateUtility.js" />
     <ElementManifest Location="Content\Elements.xml" />
     <ElementFile Location="Content\App.css" />
     <ElementFile Location="Content\ui-bootstrap-csp.css" />
@@ -120,6 +121,7 @@
     <ElementFile Location="Content\themes\base\accordion.css" />
     <ElementManifest Location="Images\Elements.xml" />
     <ElementFile Location="Images\AppIcon.png" />
+    <ElementFile Location="Images\SharePointPlex-logo.png" />
     <ElementManifest Location="Elements.xml" />
     <ElementFile Location="fonts\glyphicons-halflings-regular.woff" />
     <ElementFile Location="fonts\glyphicons-halflings-regular.ttf" />

@@ -12,9 +12,8 @@
             .getAllListTemplates()
             .then(function (response) {
                 vm.allListTemplate = response.d.results;
-                console.log(response);
-            }, function (error) {
-                console.log(error);
+            }, function (errorResponse) {
+                listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });
     }
 })();
