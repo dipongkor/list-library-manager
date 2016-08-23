@@ -50,31 +50,25 @@
             controllerAs: "vm"
         })
         .state("app.listEdit", {
-            url: "/list/edit/{listId}/{listName}",
+            url: "/list/edit/{listTemplate}/{listId}/{listName}",
             templateUrl: "../Templates/list/list-edit.html",
             controller: "listEditCtrl",
             controllerAs: "vm"
         })
-        .state("app.listClear", {
-            url: "/list/clear/{listId}/{listName}",
-            templateUrl: "../Templates/list/list-clear.html",
-            controller: "listClearCtrl",
-            controllerAs: "vm"
-        })
         .state("app.removeColumn", {
-            url: "/remove/column/{listId}/{listName}",
+            url: "/remove/column/{listTemplate}/{listId}/{listName}",
             templateUrl: "../Templates/list/remove-column.html",
             controller: "removeColumnCtrl",
             controllerAs: "vm"
         })
         .state("app.reorderColumn", {
-            url: "/reorder/column/{listId}/{listName}",
-            templateUrl: "../Templates/reorder-column.html",
+            url: "/reorder/column/{listTemplate}/{listId}/{listName}",
+            templateUrl: "../Templates/list/reorder-column.html",
             controller: "reorderColumnCtrl",
             controllerAs: "vm"
         })
         .state("app.addColumn", {
-            url: "/add/column/{listId}/{listName}",
+            url: "/add/column/{listTemplate}/{listId}/{listName}",
             templateUrl: "../Templates/list/add-column.html",
             controller: "addColumnCtrl",
             controllerAs: "vm"

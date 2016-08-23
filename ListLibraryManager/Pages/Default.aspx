@@ -9,11 +9,11 @@
 <%-- The markup and script in the following Content element will be placed in the <head> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <!-- JS Libraries -->
-    <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
-    
+    <script src="../Scripts/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui-1.12.0.min.js"></script>
     <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular.min.js" type="text/javascript"></script>
-   <%-- <script src="../Scripts/angular-route.min.js" type="text/javascript"></script>--%>
+    <script src="../Scripts/angular-ui.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular-confirm.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular-ui/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular-ui-router.js"></script>
@@ -29,6 +29,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" type='text/css' media='all'/>
     <link href="../Content/loading-bar.min.css" rel="stylesheet" type='text/css' media='all' />
     <link href="../Content/toaster.min.css" rel="stylesheet" type='text/css' media='all'/>
+    <link href="../Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
     <!-- APP CSS -->
     <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
     <!-- APP JS -->

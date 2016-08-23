@@ -12,5 +12,9 @@
     cursor:pointer!important;
 }
 
+a.btn-primary:visited {
+    color:white;
+}
+
 
 

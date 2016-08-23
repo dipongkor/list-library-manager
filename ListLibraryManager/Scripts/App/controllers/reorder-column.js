@@ -3,14 +3,15 @@
     angular.module("listLibraryManagerApp")
     .controller("reorderColumnCtrl", reorderColumnCtrl);
 
-    reorderColumnCtrl.$inject = ["listLibraryManagerSvc", "$stateParams", "$state", "$confirm", "toaster"];
+    reorderColumnCtrl.$inject = ["listLibraryManagerSvc", "$stateParams", "toaster", "cfpLoadingBar"];
 
-    function reorderColumnCtrl(listLibraryManagerSvc, $stateParams, $state, $confirm, toaster) {
+    function reorderColumnCtrl(listLibraryManagerSvc, $stateParams, toaster, cfpLoadingBar) {
         var vm = this;
 
         var listId = $stateParams.listId;
         vm.listName = $stateParams.listName;
         vm.contentTypes = [];
+        vm.params = $stateParams;
 
         vm.contentTypeOnchange = function (selectedContentType) {
             listLibraryManagerSvc
@@ -36,5 +37,17 @@
             }, function (error) {
                 listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });
+
+        vm.applyOrder = function (selectedContentType) {
+            cfpLoadingBar.start();
+            listLibraryManagerSvc.reorderColumn(selectedContentType, vm.listName)
+            .then(function (response) {
+                listLibraryManagerSvc.toast("success", response);
+                cfpLoadingBar.complete();
+            }, function (error) {
+                listLibraryManagerSvc.toast("error", error);
+                cfpLoadingBar.complete();
+            });
+        };
     }
 })();

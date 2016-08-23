@@ -9,6 +9,7 @@
         var vm = this;
         vm.listName = $stateParams.listName;
         var listId = $stateParams.listId;
+        vm.params = $stateParams;
 
         vm.editableFields = [];
 

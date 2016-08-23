@@ -10,6 +10,7 @@
 
         var listId = $stateParams.listId;
         vm.listName = $stateParams.listName;
+        vm.params = $stateParams;
 
         listLibraryManagerSvc
             .getListById(listId)
@@ -24,7 +25,7 @@
             listLibraryManagerSvc
                 .updateList(selectedList)
             .then(function (data) {
-                $state.go("app.list", { listId: selectedList.Id, listName: selectedList.Title });
+                $state.go("app.list", { listTemplate: $stateParams.listTemplate, listId: selectedList.Id, listName: selectedList.Title });
                 listLibraryManagerSvc.toast("success", String.format("{0} has been updated successfully", selectedList.Title));
             }, function (error) {
                 listLibraryManagerSvc.toast("error", errorResponse.error.error.message);

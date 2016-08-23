@@ -3,10 +3,6 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
     <ProjectItemFile Source="App.js" Target="Scripts\" Type="ElementFile" />
-    <ProjectItemFile Source="jquery-1.9.1.min.map" Target="Scripts\" Type="ElementFile" />
-    <ProjectItemFile Source="jquery-1.9.1.min.js" Target="Scripts\" Type="ElementFile" />
-    <ProjectItemFile Source="jquery-1.9.1.js" Target="Scripts\" Type="ElementFile" />
-    <ProjectItemFile Source="jquery-1.9.1.intellisense.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="angular-ui\ui-bootstrap-tpls.min.js" Target="Scripts\angular-ui\" Type="ElementFile" />
     <ProjectItemFile Source="angular-ui\ui-bootstrap-tpls.js" Target="Scripts\angular-ui\" Type="ElementFile" />
     <ProjectItemFile Source="angular-ui\ui-bootstrap.min.js" Target="Scripts\angular-ui\" Type="ElementFile" />
@@ -62,5 +58,12 @@
     <ProjectItemFile Source="toaster.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="App\services\event.js" Target="Scripts\App\services\" Type="ElementFile" />
     <ProjectItemFile Source="App\controllers\reorder-column.js" Target="Scripts\App\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-ui.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.12.4.min.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.12.4.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.12.4.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.12.4.intellisense.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui-1.12.0.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui-1.12.0.js" Target="Scripts\" Type="ElementFile" />
   </Files>
 </ProjectItem>

@@ -1,0 +1,40 @@
+﻿<div class="col-md-12">
+    <ol class="breadcrumb">
+        <li><a ui-sref="app.list({listTemplate: vm.params.listTemplate, listId: vm.params.listId, listName: vm.params.listName})">{{vm.listName}}</a></li>
+        <li class="active">Reorder Column</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label class="control-label">Select Content Type</label>
+
+                <select ng-model="vm.selectedContentType"
+                        data-ng-change="vm.contentTypeOnchange(vm.selectedContentType)"
+                        class="form-control"
+                        ng-options="contentType as contentType.Name for contentType in vm.contentTypes"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody ui-sortable ng-model="vm.selectedContentType.allFields">
+                    <tr data-ng-repeat="field in vm.selectedContentType.allFields" class="item" style="cursor: move;">
+                        <td>{{$index + 1}}</td>
+                        <td>{{field.Title}}</td>
+                        <td>{{field.TypeDisplayName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="" class="btn btn-primary" data-ng-click="vm.applyOrder(vm.selectedContentType)">APPLY</a>
+        </div>
+    </div>
+</div>

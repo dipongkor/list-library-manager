@@ -20,7 +20,8 @@
             getAllLists: getAllLists,
             addLookupField: addLookupField,
             addNewList: addNewList,
-            toast: toast
+            toast: toast,
+            reorderColumn: reorderColumn
         };
 
         function getAllListsByTemplateId(templateId) {
@@ -86,7 +87,7 @@
         }
 
         function getFieldsByContentType(selectedContentType) {
-            var query = selectedContentType.Fields.__deferred.uri;
+            var query = selectedContentType.Fields.__deferred.uri + "?$filter=ReadOnlyField eq false and TypeDisplayName ne 'Computed'";
             return spBaseService.getRequest(null, query);
         }
 
@@ -124,6 +125,38 @@
                 type: type,
                 title: "List/Library Manager says",
                 body: message
+            });
+        }
+
+        function reorderColumn(selectedContentType, listTitle) {
+            return new Promise(function (resolve,reject) {
+                var listContentTypes;
+
+                var ctx = new SP.ClientContext(spBaseService.baseUrl);
+                var list = ctx.get_web().get_lists().getByTitle(listTitle);
+
+                listContentTypes = list.get_contentTypes();
+
+                ctx.load(listContentTypes);
+
+                ctx.executeQueryAsync(function () {
+                    var itemContenType = listContentTypes.getById(selectedContentType.Id.StringValue);
+                    var itemContenTypeFieldLink = itemContenType.get_fieldLinks();
+                    var reorderedFields = [];
+                    selectedContentType.allFields.forEach(function (field) {
+                        reorderedFields.push(field.InternalName);
+                    });
+                    itemContenTypeFieldLink.reorder(reorderedFields);
+                    itemContenType.update(false);
+                    ctx.executeQueryAsync(function () {
+                        resolve("New order applied successfully.");
+                    }, function (sender, args) {
+                        reject(args.get_message());
+                    });
+                   
+                }, function (sender, args) {
+                    reject(args.get_message());
+                });
             });
         }
     }

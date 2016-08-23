@@ -50,6 +50,7 @@
                         .then(function (response) {
                             listLibraryManagerSvc.toast("success", "All items have been deleted successfylly.");
                             cfpLoadingBar.complete();
+                            vm.selectedList.ItemCount = 0;
                         }, function (error) {
                             listLibraryManagerSvc.toast("error", error);
                             cfpLoadingBar.complete();

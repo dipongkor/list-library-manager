@@ -1,6 +1,6 @@
 ﻿<div class="col-md-12">
     <ol class="breadcrumb">
-        <li>{{vm.listTemplate}}</li>
+        <li><a ui-sref="app.template({templateId: vm.selectedList.BaseTemplate , templateName: vm.listTemplate})">{{vm.listTemplate}}</a></li>
         <li class="active">{{vm.listName}}</li>
     </ol>
     <table class="table table-bordered">
@@ -44,7 +44,7 @@
 
     <div class="pull-right">
         <span class="ms-cui-row-onerow">
-            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.listEdit({listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
+            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.listEdit({listTemplate: vm.listTemplate, listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
                 <span class="ms-cui-ctl-largeIconContainer">
                     <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
                         <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -375px; left: -511px;">
@@ -64,7 +64,7 @@
                 <span class="ms-cui-ctl-largelabel">Clear <br /> Data</span>
             </a>
 
-            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.addColumn({listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
+            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.addColumn({listTemplate: vm.listTemplate, listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
                 <span class="ms-cui-ctl-largeIconContainer">
                     <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
                         <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -239px; left: -411px;">
@@ -73,7 +73,7 @@
                 <span class="ms-cui-ctl-largelabel">Add <br /> Column</span>
             </a>
 
-            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.reorderColumn({listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
+            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.reorderColumn({listTemplate: vm.listTemplate, listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
                 <span class="ms-cui-ctl-largeIconContainer">
                     <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
                         <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -137px; left: -306px;">
@@ -82,7 +82,7 @@
                 <span class="ms-cui-ctl-largelabel">Reorder <br /> Column</span>
             </a>
 
-            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.removeColumn({listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
+            <a href="javascript:void(0);" class="ms-cui-ctl-large" ui-sref="app.removeColumn({listTemplate: vm.listTemplate, listId: vm.selectedList.Id, listName: vm.selectedList.Title})">
                 <span class="ms-cui-ctl-largeIconContainer">
                     <span class=" ms-cui-img-32by32 ms-cui-img-cont-float">
                         <img src="/_layouts/15/1033/images/formatmap32x32.png?rev=43" style="top: -175px; left: -411px;">

@@ -10,7 +10,7 @@
         var listId = $stateParams.listId;
         vm.listName = $stateParams.listName;
         vm.contentTypes = [];
-
+        vm.params = $stateParams;
         vm.contentTypeOnchange = function (selectedContentType) {
             listLibraryManagerSvc
                 .getFieldsByContentType(selectedContentType)
