@@ -147,6 +147,8 @@
     <ElementFile Location="Templates\list\columns\lookup.html" />
     <ElementFile Location="Templates\list\list-add.html" />
     <ElementFile Location="Templates\list\reorder-column.html" />
+    <ElementFile Location="Templates\about.html" />
+    <ElementFile Location="Templates\contact.html" />
     <ElementManifest Location="Views\Elements.xml" />
     <ElementFile Location="Views\Sample.txt" />
   </ElementManifests>

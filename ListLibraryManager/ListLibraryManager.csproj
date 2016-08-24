@@ -130,7 +130,9 @@
     <Content Include="Scripts\loading-bar.js" />
     <Content Include="Scripts\loading-bar.min.js" />
     <Content Include="Scripts\toaster.min.js" />
+    <Content Include="Templates\about.html" />
     <Content Include="Templates\allListsByTemplate.html" />
+    <Content Include="Templates\contact.html" />
     <Content Include="Templates\directives\navigation.html" />
     <Content Include="Templates\home.html" />
     <Content Include="Templates\list\add-column.html" />

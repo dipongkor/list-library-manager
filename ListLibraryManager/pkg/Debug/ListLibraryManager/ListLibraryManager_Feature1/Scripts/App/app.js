@@ -31,6 +31,14 @@
             controller: "homeCtrl",
             controllerAs: "vm"
         })
+        .state("app.about", {
+            url: "/about",
+            templateUrl: "../Templates/about.html"
+        })
+        .state("app.contact", {
+            url: "/contact",
+            templateUrl: "../Templates/contact.html"
+        })
         .state("app.template", {
             url: "/template/{templateId}/{templateName}",
             templateUrl: "../Templates/allListsByTemplate.html",

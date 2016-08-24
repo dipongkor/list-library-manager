@@ -25,5 +25,7 @@
     <File Path="Templates\list\columns\lookup.html" Url="Templates/list/columns/lookup.html" ReplaceContent="TRUE" />
     <File Path="Templates\list\list-add.html" Url="Templates/list/list-add.html" ReplaceContent="TRUE" />
     <File Path="Templates\list\reorder-column.html" Url="Templates/list/reorder-column.html" ReplaceContent="TRUE" />
+    <File Path="Templates\about.html" Url="Templates/about.html" ReplaceContent="TRUE" />
+    <File Path="Templates\contact.html" Url="Templates/contact.html" ReplaceContent="TRUE" />
   </Module>
 </Elements>
