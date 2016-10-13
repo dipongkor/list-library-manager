@@ -16,7 +16,7 @@
     <script src="../Scripts/angular-ui.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular-confirm.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular-ui/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
-    <script src="../Scripts/angular-ui-router.js"></script>
+    <script src="../Scripts/angular-ui-router.min.js"></script>
     <script src="../Scripts/angular-animate.min.js" type="text/javascript"></script>
     <script src="../Scripts/loading-bar.min.js" type="text/javascript"></script>
     <script src="../Scripts/toaster.min.js" type="text/javascript"></script>

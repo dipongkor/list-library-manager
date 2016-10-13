@@ -41,13 +41,6 @@
                 fieldTypeKind: 9
             },
             {
-                name: "Currency",
-                title: "Currency ($, ¥, €)",
-                sref: "app.addColumn.currency",
-                type: "SP.FieldCurrency",
-                fieldTypeKind: 10
-            },
-            {
                 name: "DateTime",
                 title: "Date and Time",
                 sref: "app.addColumn.datetime",
@@ -79,7 +72,7 @@
                 name: "URL",
                 title: "Hyperlink or Picture",
                 sref: "app.addColumn.hyperlink",
-                type: "SP.Field",
+                type: "SP.FieldUrl",
                 fieldTypeKind: 11
             }];
 

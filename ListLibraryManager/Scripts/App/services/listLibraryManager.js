@@ -21,7 +21,8 @@
             addLookupField: addLookupField,
             addNewList: addNewList,
             toast: toast,
-            reorderColumn: reorderColumn
+            reorderColumn: reorderColumn,
+            getListsForLookupColumns: getListsForLookupColumns
         };
 
         function getAllListsByTemplateId(templateId) {
@@ -97,10 +98,15 @@
         }
 
         function getAllLists(searchKey) {
-            var query = "/_api/Web/Lists?$top=10&select=Title,Description,ItemCount,BaseTemplate,Id";
+            var query = "/_api/Web/Lists?$top=10&$select=Title,Description,ItemCount,BaseTemplate,Id";
             if (searchKey) {
                 query += String.format("&$filter=substringof('{0}',Title)", searchKey);
             }
+            return spBaseService.getRequest(query);
+        }
+
+        function getListsForLookupColumns() {
+            var query = "/_api/web/lists?$filter=Hidden eq false&$select=Title,Description,ItemCount,BaseTemplate,Id";
             return spBaseService.getRequest(query);
         }
 

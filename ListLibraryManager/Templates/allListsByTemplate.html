@@ -2,14 +2,14 @@
     <div class="col-md-12">
         <ol class="breadcrumb">
             <li>All Templates</li>
-            <li class="active">{{vm.templateName}}</li>
+            <li class="active">{{vm.templateName}}(s)</li>
         </ol>
         <div>
             <a ui-sref="app.listAdd({listTemplate: vm.templateName, templateId: vm.templateId})" class="btn btn-primary pull-right">Add New {{vm.templateName}}</a>
         </div>
         <br />
         <br />
-        <table class="table table-bordered">
+        <table class="table table-bordered" data-ng-if="vm.allListIsLoaded && vm.allLists.length > 0">
             <tr>
                 <th>Name</th>
                 <th>Description</th>
@@ -29,5 +29,6 @@
                 </td>
             </tr>
         </table>
+        <h4 data-ng-if="vm.allListIsLoaded && vm.allLists.length == 0">There is no {{vm.templateName}} in this site.</h4>
     </div>
 </div>
