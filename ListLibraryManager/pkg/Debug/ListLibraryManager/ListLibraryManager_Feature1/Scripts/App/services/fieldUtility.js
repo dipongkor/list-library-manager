@@ -72,7 +72,7 @@
                 name: "URL",
                 title: "Hyperlink or Picture",
                 sref: "app.addColumn.hyperlink",
-                type: "SP.Field",
+                type: "SP.FieldUrl",
                 fieldTypeKind: 11
             }];
 

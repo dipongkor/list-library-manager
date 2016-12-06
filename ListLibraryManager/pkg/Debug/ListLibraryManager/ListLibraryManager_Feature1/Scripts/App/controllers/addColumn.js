@@ -26,7 +26,7 @@
 
         vm.columnTypes = fieldUtilitySvc.fields;
 
-        eventService.on("newColumnAdded", function (data,newColumn) {
+        eventService.on("newColumnAdded", function (data, newColumn) {
             vm.editableFields.push(newColumn);
             vm.selectedType = null;
         });

@@ -1,6 +1,6 @@
-﻿<div class="form-group">
+﻿<div class="form-group" ng-class="{ 'has-error' : addColumnForm.title.$invalid}">   
     <label class="control-label">Name</label>
-    <input type="text" class="form-control" data-ng-model="vm.column.Title">
+    <input type="text" class="form-control" data-ng-model="vm.column.Title" required name="title">
 </div>
 
 <div class="form-group">
@@ -30,18 +30,18 @@
     </label>
 </div>
 
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : addColumnForm.lookupList.$invalid}">
     <label class="control-label">Get information from</label>
     <select ng-model="vm.lookupList"
             class="form-control"
-            ng-options="type as type.Title for type in vm.lookupLists"></select>
+            ng-options="type as type.Title for type in vm.lookupLists" name="lookupList" required></select>
 </div>
 
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : addColumnForm.lookupColumn.$invalid}">
     <label class="control-label">In this column</label>
     <select ng-model="vm.column.LookupField"
             class="form-control"
-            ng-options="col as col for col in ['Title', 'ID', 'Created', 'Modified', 'Version', 'Copy Source']"></select>
+            ng-options="col as col for col in ['Title', 'ID', 'Created', 'Modified', 'Version', 'Copy Source']" name="lookupColumn" required></select>
 </div>
 
-<a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.addColumn(vm.column)">Add</a>
+<a href="javascript:void(0)" class="btn btn-primary" data-ng-click="vm.addColumn(vm.column)" ng-disabled="addColumnForm.$invalid">Add</a>

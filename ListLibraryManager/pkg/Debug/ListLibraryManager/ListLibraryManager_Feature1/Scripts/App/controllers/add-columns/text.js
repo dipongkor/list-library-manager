@@ -31,7 +31,7 @@
                 eventService.trigger("newColumnAdded", response.d);
                 $state.go("app.addColumn", $stateParams);
 
-            }, function (error) {
+            }, function (errorResponse) {
                 listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });
         };

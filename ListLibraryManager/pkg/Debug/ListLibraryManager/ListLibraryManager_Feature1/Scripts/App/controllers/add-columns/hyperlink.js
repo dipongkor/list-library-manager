@@ -16,7 +16,9 @@
             __metadata: {
                 type: fieldInfo.type
             },
-            FieldTypeKind: fieldInfo.fieldTypeKind
+            FieldTypeKind: fieldInfo.fieldTypeKind,
+            Required: false,
+            DisplayFormat: "0"
         };
 
 
@@ -28,7 +30,7 @@
                 listLibraryManagerSvc.toast("success", "New column has been added successfully.");
                 eventService.trigger("newColumnAdded", response.d);
                 $state.go("app.addColumn", $stateParams);
-            }, function (error) {
+            }, function (errorResponse) {
                 listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });
         };
