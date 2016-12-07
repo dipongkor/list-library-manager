@@ -3,9 +3,9 @@
     angular.module("listLibraryManagerApp")
         .controller("listDetailsCtrl", listDetailsCtrl);
 
-    listDetailsCtrl.$inject = ["listLibraryManagerSvc", "$stateParams", "$window", "$confirm", "cfpLoadingBar", "toaster"];
+    listDetailsCtrl.$inject = ["listLibraryManagerSvc", "$stateParams", "$window", "$confirm", "cfpLoadingBar", "toaster", "$state"];
 
-    function listDetailsCtrl(listLibraryManagerSvc, $stateParams, $window, $confirm, cfpLoadingBar, toaster) {
+    function listDetailsCtrl(listLibraryManagerSvc, $stateParams, $window, $confirm, cfpLoadingBar, toaster, $state) {
         var vm = this;
 
         var listId = $stateParams.listId;
@@ -22,7 +22,7 @@
 
         vm.removeList = function (listId) {
             $confirm({
-                text: String.format("{0} will be deleted permanently", vm.listName),
+                text: String.format("<b>{0}</b> will be deleted permanently", vm.listName),
                 title: "Are you sure?"
             })
                 .then(function () {
@@ -30,7 +30,7 @@
                         .removeList(listId)
                         .then(function (response) {
                             listLibraryManagerSvc.toast("success", String.format("{0} has been deleted successfully.", vm.listName));
-                            $window.history.back();
+                            $state.go("app.template", {templateId: vm.selectedList.BaseTemplate , templateName: vm.listTemplate});
                         }, function (error) {
                             listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
                         });

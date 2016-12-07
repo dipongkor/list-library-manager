@@ -9,9 +9,15 @@
         var vm = this;
         vm.appName = "List/Library Manager";
 
-        listLibraryManagerSvc.getAllLists()
+        vm.skip = 0;
+        vm.top = 6;
+        vm.pageStart = 1;
+        vm.pageEnd = vm.skip + vm.top;
+
+        listLibraryManagerSvc.getAllLists(vm.skip, vm.top)
         .then(function (response) {
             vm.allLists = response.d.results;
+            vm.pageEnd = vm.skip + vm.allLists.length;
         }, function (error) {
 
         });
@@ -31,6 +37,47 @@
             listLibraryManagerSvc.getAllLists(searchText)
             .then(function (response) {
                 vm.allLists = response.d.results;
+            }, function (errorResponse) {
+                listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
+            });
+        };
+
+        vm.goToPreviousPage = function () {
+            if ((vm.skip - vm.allLists.length) < 0) {
+                return;
+            }
+            listLibraryManagerSvc
+            .getAllLists(vm.skip - vm.allLists.length, vm.top)
+            .then(function (response) {
+                if (response.d.results.length) {
+                    vm.skip -= vm.allLists.length;
+                    vm.pageEnd -= vm.allLists.length;
+                    vm.pageStart -= vm.top;
+                    vm.allLists = response.d.results;
+                    vm.allListIsLoaded = true;
+                } else {
+                    listLibraryManagerSvc.toast("info", "No more" + vm.templateName + " in this list.");
+                }
+
+            }, function (errorResponse) {
+                listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
+            });
+        };
+
+        vm.goToNexPage = function () {
+            listLibraryManagerSvc
+            .getAllLists(vm.skip + vm.top, vm.top)
+            .then(function (response) {
+                if (response.d.results.length) {
+                    vm.allLists = response.d.results;
+                    vm.skip += vm.allLists.length;
+                    vm.pageEnd += vm.allLists.length;
+                    vm.pageStart += vm.top;
+                    vm.allListIsLoaded = true;
+                } else {
+                    listLibraryManagerSvc.toast("info", "No more" + vm.templateName + " in this list.");
+                }
+
             }, function (errorResponse) {
                 listLibraryManagerSvc.toast("error", errorResponse.error.error.message);
             });

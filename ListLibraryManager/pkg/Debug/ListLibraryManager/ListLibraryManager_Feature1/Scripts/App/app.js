@@ -4,6 +4,7 @@
         "spNgModule",
         "angular-loading-bar",
         "ngAnimate",
+        "ngSanitize",
         "ui.router",
         "ui.bootstrap",
         "angular-confirm",

@@ -8,7 +8,6 @@
     <ElementFile Location="Scripts\angular-ui\ui-bootstrap-tpls.js" />
     <ElementFile Location="Scripts\angular-ui\ui-bootstrap.min.js" />
     <ElementFile Location="Scripts\angular-ui\ui-bootstrap.js" />
-    <ElementFile Location="Scripts\angular.min.js" />
     <ElementFile Location="Scripts\angular-animate.min.js" />
     <ElementFile Location="Scripts\bootstrap.min.js" />
     <ElementFile Location="Scripts\sp-ng-module.min.js" />
@@ -46,6 +45,14 @@
     <ElementFile Location="Scripts\jquery-1.12.4.min.js" />
     <ElementFile Location="Scripts\jquery-ui-1.12.0.min.js" />
     <ElementFile Location="Scripts\App\services\templateUtility.js" />
+    <ElementFile Location="Scripts\App\controllers\findListLibrary.js" />
+    <ElementFile Location="Scripts\angular.min.js.map" />
+    <ElementFile Location="Scripts\angular.min.js" />
+    <ElementFile Location="Scripts\angular.js" />
+    <ElementFile Location="Scripts\angular-mocks.js" />
+    <ElementFile Location="Scripts\angular-sanitize.min.js.map" />
+    <ElementFile Location="Scripts\angular-sanitize.min.js" />
+    <ElementFile Location="Scripts\angular-sanitize.js" />
     <ElementManifest Location="Content\Elements.xml" />
     <ElementFile Location="Content\App.css" />
     <ElementFile Location="Content\ui-bootstrap-csp.css" />
@@ -100,6 +107,7 @@
     <ElementManifest Location="Images\Elements.xml" />
     <ElementFile Location="Images\AppIcon.png" />
     <ElementFile Location="Images\SharePointPlex-logo.png" />
+    <ElementFile Location="Images\app-logo.png" />
     <ElementManifest Location="Elements.xml" />
     <ElementFile Location="fonts\glyphicons-halflings-regular.woff" />
     <ElementFile Location="fonts\glyphicons-halflings-regular.ttf" />

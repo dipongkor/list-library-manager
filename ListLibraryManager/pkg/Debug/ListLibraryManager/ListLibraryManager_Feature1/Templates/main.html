@@ -1,15 +1,15 @@
 ﻿<div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
         <ul class="list-group">
             <li class="list-group-item" data-ng-repeat="template in vm.allListTemplate">
-                <a ui-sref="app.template({templateId: template.ListTemplateTypeKind, templateName: template.Name})">
+                <a ui-sref="app.template({templateId: template.ListTemplateTypeKind, templateName: template.Name})" title="{{template.Description}}">
                     <img src="{{template.ImageUrl}}" />
                     {{template.Name}}
                 </a>
             </li>
         </ul>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-9">
         <div ui-view></div>
     </div>
 </div>

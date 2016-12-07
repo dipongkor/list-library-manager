@@ -6,7 +6,6 @@
     <ProjectItemFile Source="angular-ui\ui-bootstrap-tpls.js" Target="Scripts\angular-ui\" Type="ElementFile" />
     <ProjectItemFile Source="angular-ui\ui-bootstrap.min.js" Target="Scripts\angular-ui\" Type="ElementFile" />
     <ProjectItemFile Source="angular-ui\ui-bootstrap.js" Target="Scripts\angular-ui\" Type="ElementFile" />
-    <ProjectItemFile Source="angular.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="angular-animate.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="bootstrap.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="sp-ng-module.min.js" Target="Scripts\" Type="ElementFile" />
@@ -44,5 +43,13 @@
     <ProjectItemFile Source="jquery-1.12.4.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="jquery-ui-1.12.0.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="App\services\templateUtility.js" Target="Scripts\App\services\" Type="ElementFile" />
+    <ProjectItemFile Source="App\controllers\findListLibrary.js" Target="Scripts\App\controllers\" Type="ElementFile" />
+    <ProjectItemFile Source="angular.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-mocks.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-sanitize.min.js.map" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-sanitize.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular-sanitize.js" Target="Scripts\" Type="ElementFile" />
   </Files>
 </ProjectItem>

@@ -4,5 +4,6 @@
     <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
     <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="SharePointPlex-logo.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="app-logo.png" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

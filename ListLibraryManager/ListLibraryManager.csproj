@@ -89,10 +89,16 @@
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\toaster.min.css" />
+    <Content Include="Images\app-logo.png" />
     <Content Include="Images\SharePointPlex-logo.png" />
     <Content Include="Scripts\angular-confirm.min.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-sanitize.js" />
+    <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular-ui.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\App\controllers\add-columns\boolean.js" />
     <Content Include="Scripts\App\controllers\add-columns\choice.js" />
     <Content Include="Scripts\App\controllers\add-columns\dateTime.js" />
@@ -104,6 +110,7 @@
     <Content Include="Scripts\App\controllers\add-columns\text.js" />
     <Content Include="Scripts\App\controllers\add-columns\user.js" />
     <Content Include="Scripts\App\controllers\addColumn.js" />
+    <Content Include="Scripts\App\controllers\findListLibrary.js" />
     <Content Include="Scripts\App\controllers\listAdd.js" />
     <Content Include="Scripts\App\controllers\removeColumn.js" />
     <Content Include="Scripts\App\controllers\home.js" />
@@ -163,6 +170,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="Scripts\angular-sanitize.min.js.map" />
+    <None Include="Scripts\angular.min.js.map" />
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{07ee9a6a-e058-46c5-b58e-d40b7f964251}</SharePointProjectItemId>
     </None>
@@ -179,7 +188,6 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
-    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Elements.xml" />

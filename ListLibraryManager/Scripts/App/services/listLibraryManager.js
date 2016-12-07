@@ -25,13 +25,13 @@
             getListsForLookupColumns: getListsForLookupColumns
         };
 
-        function getAllListsByTemplateId(templateId) {
-            var query = "/_api/web/lists?$filter=BaseTemplate eq " + templateId;
+        function getAllListsByTemplateId(templateId, skip, top) {
+            var query = "/_api/web/lists?$filter=BaseTemplate eq " + templateId + "&$orderby=Title asc" + "&$skip=" + skip + "&$top=" + top;
             return spBaseService.getRequest(query);
         }
 
         function getAllListTemplates() {
-            var query = "/_api/web/ListTemplates?$select=ImageUrl,Name,ListTemplateTypeKind&$filter=Hidden eq false";
+            var query = "/_api/web/ListTemplates?$select=ImageUrl,Name,ListTemplateTypeKind,Description&$filter=Hidden eq false&$orderby=Name asc";
             return spBaseService.getRequest(query);
         }
 
@@ -97,8 +97,8 @@
             return spBaseService.getRequest(query);
         }
 
-        function getAllLists(searchKey) {
-            var query = "/_api/Web/Lists?$top=10&$select=Title,Description,ItemCount,BaseTemplate,Id";
+        function getAllLists(skip, top, searchKey) {
+            var query = "/_api/Web/Lists?$select=Title,Description,ItemCount,BaseTemplate,Id&$top=" + top + "&$skip=" + skip;
             if (searchKey) {
                 query += String.format("&$filter=substringof('{0}',Title)", searchKey);
             }

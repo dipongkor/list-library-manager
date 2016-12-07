@@ -3,5 +3,6 @@
   <Module Name="Images">
     <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
     <File Path="Images\SharePointPlex-logo.png" Url="Images/SharePointPlex-logo.png" ReplaceContent="TRUE" />
+    <File Path="Images\app-logo.png" Url="Images/app-logo.png" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -15,7 +15,6 @@
             listLibraryManagerSvc
                 .getFieldsByContentType(selectedContentType)
                 .then(function (response) {
-                    console.log(response);
                     vm.selectedContentType.allFields = response.d.results;
                 }, function (error) {
 

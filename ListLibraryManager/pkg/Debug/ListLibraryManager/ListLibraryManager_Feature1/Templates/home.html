@@ -5,14 +5,14 @@
             <div class="col-md-6">
                 <h3 id="all-lists-header">All Lists/Libraries</h3>
             </div>
-            <div class="col-md-6">
+            <!--<div class="col-md-6">
                 <div class="form-inline pull-right">
                     <div class="form-group">
                         <input type="text" value="" placeholder="Find list or library" class="form-control" data-ng-model="vm.searchText" />
                     </div>
                     <a href="" class="btn btn-primary" data-ng-click="vm.findList(vm.searchText)">Go</a>
                 </div>
-            </div>
+            </div>-->
 
         </div>
 
@@ -38,6 +38,25 @@
                         </td>
                     </tr>
                 </table>
+                <div data-ng-if="vm.allLists.length" class="pull-right">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td id="pagingWPQ2prev" data-ng-click="vm.goToPreviousPage()" data-ng-if="vm.pageStart > 1">
+                                    <a href="javascript:" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled">
+                                        <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td class="ms-paging" data-ng-if="vm.allLists.length >= vm.top || vm.pageStart > 1">{{vm.pageStart}} - {{vm.pageEnd}}</td>
+                                <td id="pagingWPQ2next" data-ng-click="vm.goToNexPage()" data-ng-if="vm.allLists.length >= vm.top">
+                                    <a href="javascript:" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled">
+                                        <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

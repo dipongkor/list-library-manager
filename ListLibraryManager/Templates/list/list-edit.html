@@ -4,7 +4,7 @@
             <li><a ui-sref="app.list({listTemplate: vm.params.listTemplate, listId: vm.params.listId, listName: vm.params.listName})">{{vm.listName}}</a></li>
             <li class="active">Edit Properties</li>
         </ol>
-        <div ng-form="editListForm" novalidate>
+        <div ng-form="editListForm" novalidate data-ng-if="vm.selectedList">
             <div class="form-group" ng-class="{ 'has-error' : editListForm.listTitle.$invalid}">
                 <label class="control-label">Name</label>
                 <input type="text" class="form-control" data-ng-model="vm.selectedList.Title" name="listTitle" required>
