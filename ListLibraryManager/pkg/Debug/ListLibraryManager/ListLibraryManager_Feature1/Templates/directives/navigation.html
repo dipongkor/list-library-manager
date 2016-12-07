@@ -14,16 +14,11 @@
                      <div class="form-group"> 
                         <input class="form-control" 
                                placeholder="Find List/Library" 
-                               ng-model="vm.selectedList" 
-                               uib-typeahead="title for title in vm.findList($viewValue)" 
-                               typeahead-loading="loadingLocations"
-                               typeahead-no-results="noResults"> 
+                               ng-model="selectedList" 
+                               uib-typeahead="list as list.Title for list in findList($viewValue)"
+                               typeahead-on-select="ngModelOptionsSelected($item, $model, $label, $event)">
                         </div> 
                     </div>
-                    <!--<ul class="nav navbar-nav navbar-right">
-                        <li><a ui-sref="app.about">About</a></li>
-                        <li><a ui-sref="app.contact">Contact</a></li>
-                    </ul>-->
                 </div>
             </div>
         </nav>

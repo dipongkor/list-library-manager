@@ -1,5 +1,4 @@
-﻿/* Place custom styles below */
-#s4-titlerow, #suiteBarDelta,#s4-ribbonrow{
+﻿#s4-titlerow, #suiteBarDelta,#s4-ribbonrow{
     display:none!important;
 }
 
@@ -12,19 +11,21 @@
     cursor:pointer!important;
 }
 
-a.btn-primary:visited {
-    color:white;
-}
-
 #all-lists-header{
     margin-top:1px;
 }
-a:hover{
+a, a:hover, a:active, a:visited,a:focus {
     text-decoration:none!important;
+    outline: 0;
+    color:#428bca!important;
 }
-a:visited{
-    color: #2a6496;
-    text-decoration:none!important;
+
+a.btn-primary{
+    color:white!important;
+}
+
+a.btn-primary:visited {
+    color:white;
 }
 
 .ms-promlink-button{

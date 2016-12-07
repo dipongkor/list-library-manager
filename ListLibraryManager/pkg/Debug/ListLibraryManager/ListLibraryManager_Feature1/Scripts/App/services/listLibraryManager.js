@@ -97,11 +97,15 @@
             return spBaseService.getRequest(query);
         }
 
-        function getAllLists(skip, top) {
+        function capitalize(name) {
+            return name[0].toUpperCase() + name.slice(1);
+        }
+
+        function getAllLists(skip, top, searchKey) {
             var query = "/_api/Web/Lists?$select=Title,Description,ItemCount,BaseTemplate,Id&$top=" + top + "&$skip=" + skip;
-            //if (searchKey) {
-            //    query += String.format("&$filter=substringof('{0}',Title)", searchKey);
-            //}
+            if (searchKey) {
+                query += String.format("&$filter=substringof('{0}',Title) or startswith(Title,'{1}')", searchKey, capitalize(searchKey));
+            }
             return spBaseService.getRequest(query);
         }
 
