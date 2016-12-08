@@ -12,7 +12,7 @@ possible. So this is your app to find list/library by a specific template.
 
 Above picture is showing all **Document Librarys**. From here, you can add new **Document Librarys**
 
-![new document library](http://i.imgur.com/gta9nto.png "new library")
+![new document library](http://i.imgur.com/CLGFdnW.gif "new library")
 
 If you want to take action on a existing list/library, then just click on **Action** icon
 ![action on document library](http://i.imgur.com/cQvYnwg.png "action on library")
