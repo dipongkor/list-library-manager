@@ -19,7 +19,7 @@ If you want to take action on a existing list/library, then just click on **Acti
 Now you can take following actions on your list/library
 ## Edit Properties
 You can quickly change/update your list/library's metadata
-![update library](http://i.imgur.com/llULLuc.png "update library")
+![update library](http://i.imgur.com/xTlncJD.gif "update library")
 ## Clear Data
 You can delete your all items/files from your lists/libraries at a time.
 ![Clear Data](http://i.imgur.com/g1M9wzw.png "Clear Data")
