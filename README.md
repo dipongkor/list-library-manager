@@ -17,18 +17,21 @@ Above picture is showing all **Document Librarys**. From here, you can add new *
 If you want to take action on a existing list/library, then just click on **Action** icon
 ![action on document library](http://i.imgur.com/cQvYnwg.png "action on library")
 Now you can take following actions on your list/library
-## Edit Properties
+## 1. Edit Properties
 You can quickly change/update your list/library's metadata
 ![update library](http://i.imgur.com/xTlncJD.gif "update library")
-## Clear Data
+## 2. Clear Data
 You can delete your all items/files from your lists/libraries at a time.
 ![Clear Data](http://i.imgur.com/GkwedoL.gif "Clear Data")
-## Add Column
+## 3. Add Column
 You can add columns very easily!
 ![Add Column](http://i.imgur.com/NMORCXb.gif "Add Column")
-## Reorder Column
+## 4. Reorder Column
 You can easily reorder your columns in **Display Form** and **Edit Form** 
 ![reorder column](http://i.imgur.com/nZGiXF1.gif reorder column)
-## Remove Column
+## 5. Remove Column
 See how it is easy to remove multiple columns at a time!!
 ![remove column](http://i.imgur.com/RmLDjoA.gif remove column)
+## 6. Remove List/Library
+It's also very easy to remove list/library using this app. Just click on the **Remove List** icon from list/library details page.
+![remove list](http://i.imgur.com/A50PDvF.gif remove list)
