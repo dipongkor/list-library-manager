@@ -20,3 +20,6 @@ You can quickly change/update your list/library's metadata
 ## Clear Data
 You can delete your all items/files from your lists/libraries at a time.
 ![Clear Data](http://i.imgur.com/g1M9wzw.png "Clear Data")
+## Add Column
+You can add columns very easily!
+![Add Column](http://i.imgur.com/NMORCXb.gif "Add Column")
