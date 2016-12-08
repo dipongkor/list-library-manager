@@ -23,3 +23,9 @@ You can delete your all items/files from your lists/libraries at a time.
 ## Add Column
 You can add columns very easily!
 ![Add Column](http://i.imgur.com/NMORCXb.gif "Add Column")
+## Reorder Column
+You can easily reorder your columns in **Display Form** and **Edit Form** 
+![reorder column](http://i.imgur.com/nZGiXF1.gif reorder column)
+## Remove Column
+See how it is easy to remove multiple columns at a time!!
+![remove column](http://i.imgur.com/RmLDjoA.gif remove column)
