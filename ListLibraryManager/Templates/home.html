@@ -18,6 +18,26 @@
 
         <div class="row">
             <div class="col-md-12">
+                <div data-ng-if="vm.allLists.length" class="pull-right">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td id="pagingWPQ2prev" data-ng-click="vm.goToPreviousPage()" data-ng-if="vm.pageStart > 1">
+                                    <a href="javascript:" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled">
+                                        <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td class="ms-paging" data-ng-if="vm.allLists.length >= vm.top || vm.pageStart > 1">{{vm.pageStart}} - {{vm.pageEnd}}</td>
+                                <td id="pagingWPQ2next" data-ng-click="vm.goToNexPage()" data-ng-if="vm.allLists.length >= vm.top">
+                                    <a href="javascript:" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled">
+                                        <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                </div>
                 <table class="table table-bordered">
                     <tr>
                         <th>Name</th>
@@ -38,25 +58,7 @@
                         </td>
                     </tr>
                 </table>
-                <div data-ng-if="vm.allLists.length" class="pull-right">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td id="pagingWPQ2prev" data-ng-click="vm.goToPreviousPage()" data-ng-if="vm.pageStart > 1">
-                                    <a href="javascript:" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled">
-                                        <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
-                                    </a>
-                                </td>
-                                <td class="ms-paging" data-ng-if="vm.allLists.length >= vm.top || vm.pageStart > 1">{{vm.pageStart}} - {{vm.pageEnd}}</td>
-                                <td id="pagingWPQ2next" data-ng-click="vm.goToNexPage()" data-ng-if="vm.allLists.length >= vm.top">
-                                    <a href="javascript:" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled">
-                                        <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                
             </div>
         </div>
     </div>

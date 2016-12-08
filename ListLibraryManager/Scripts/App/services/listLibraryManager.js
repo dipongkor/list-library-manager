@@ -36,7 +36,7 @@
         }
 
         function getListById(listId) {
-            var query = String.format("/_api/Web/Lists(guid'{0}')?$expand=ContentTypes&$select=AllowContentTypes,BaseTemplate,ContentTypesEnabled,Description,EnableVersioning,Hidden,ImageUrl,ItemCount,Title,Id", listId);
+            var query = String.format("/_api/Web/Lists(guid'{0}')?$expand=ContentTypes,RootFolder&$select=AllowContentTypes,BaseTemplate,ContentTypesEnabled,Description,EnableVersioning,Hidden,ImageUrl,ItemCount,Title,Id", listId);
             return spBaseService.getRequest(query);
         }
 

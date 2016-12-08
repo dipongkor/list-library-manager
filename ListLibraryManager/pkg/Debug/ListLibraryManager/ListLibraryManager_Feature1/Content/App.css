@@ -14,7 +14,7 @@
 #all-lists-header{
     margin-top:1px;
 }
-a, a:hover, a:active, a:visited,a:focus {
+a:hover, a:active, a:visited,a:focus {
     text-decoration:none!important;
     outline: 0;
     color:#428bca!important;
@@ -31,6 +31,10 @@ a.btn-primary:visited {
 .ms-promlink-button{
     width: 23px;
     height: 25px;
+}
+
+li.active a:hover, li.active a{
+    color:white!important;
 }
 
 

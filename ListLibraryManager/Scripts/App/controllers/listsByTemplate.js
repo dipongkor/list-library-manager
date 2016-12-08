@@ -12,7 +12,7 @@
         vm.allListIsLoaded = false;
 
         vm.skip = 0;
-        vm.top = 6;
+        vm.top = 10;
         vm.pageStart = 1;
         vm.pageEnd = vm.skip + vm.top;
 

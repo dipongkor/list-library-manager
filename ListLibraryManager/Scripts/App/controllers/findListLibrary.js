@@ -11,12 +11,13 @@
                 }, function (errorResponse) {
 
                 });
-        }
+        };
 
         $scope.ngModelOptionsSelected = function ($item, $model, $label, $event) {
             var listTemplate = templateUtilitySvc.getTemplateById($item.BaseTemplate);
             if (listTemplate) {
                 $state.go("app.list", { listTemplate: listTemplate.Name, listId: $item.Id, listName: $item.Title });
+                $scope.selectedList = undefined;
             } else {
                 listLibraryManagerSvc.toast("error", "You can not perform any action on this list");
             }

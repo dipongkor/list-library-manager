@@ -1,7 +1,15 @@
 ﻿<div class="row">
     <div class="col-md-3">
         <ul class="list-group">
-            <li class="list-group-item" data-ng-repeat="template in vm.allListTemplate">
+            <li class="list-group-item">
+                <input type="text" 
+                       ng-model="selectedTemplate" 
+                       uib-typeahead="template as template.Name for template in allListTemplate | filter:$viewValue | limitTo:8" 
+                       class="form-control"
+                       typeahead-on-select="ngModelOptionsSelected($item, $model, $label, $event)"
+                       placeholder="Find By Template">
+            </li>
+            <li class="list-group-item" data-ng-repeat="template in allListTemplate">
                 <a ui-sref="app.template({templateId: template.ListTemplateTypeKind, templateName: template.Name})" title="{{template.Description}}">
                     <img src="{{template.ImageUrl}}" />
                     {{template.Name}}
