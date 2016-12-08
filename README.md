@@ -1,7 +1,7 @@
 # SharePoint List/Library Manager
 It's a SharePoint Hosted Add-in for exceling List/Library Management productivity. Managing list/library by SharePoint's default features 
 is always time consuming. This Add-in has been built with AngularJs and SharePoint REST API and its a single page app.
-![home](http://i.imgur.com/vnhMvXu.png "Optional title")
+![home](http://i.imgur.com/j1EhkNE.gif "Optional title")
 
 In home page, you will get all lists/libraries with pagination. Let's say now you want to find all **Document Library** in your site. It's 
 not possible using default feature. In site content, you will get all lists and libraries but find them by a specific template is not 
