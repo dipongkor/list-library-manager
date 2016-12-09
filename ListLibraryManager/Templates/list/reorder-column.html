@@ -27,7 +27,7 @@
                             <th>Type</th>
                         </tr>
                     </thead>
-                    <tbody ui-sortable ng-model="vm.selectedContentType.allFields">
+                    <tbody ui-sortable="vm.sortableOptions" ng-model="vm.selectedContentType.allFields">
                         <tr data-ng-repeat="field in vm.selectedContentType.allFields" class="item" style="cursor: move;">
                             <td>{{$index + 1}}</td>
                             <td>{{field.Title}}</td>

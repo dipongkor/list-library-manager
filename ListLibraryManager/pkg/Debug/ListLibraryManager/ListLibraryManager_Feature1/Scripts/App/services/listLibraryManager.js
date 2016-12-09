@@ -41,31 +41,37 @@
         }
 
         function clearAllItems(listName) {
-            
-            return new Promise(function (resolve, reject) {
-                var clientContext = new SP.ClientContext(spBaseService.baseUrl),
+
+            var deferred = $q.defer();
+
+            var clientContext = new SP.ClientContext(spBaseService.baseUrl),
                     list = clientContext.get_web().get_lists().getByTitle(listName),
                     query = new SP.CamlQuery(),
                     items = list.getItems(query);
-                        clientContext.load(items, "Include(Id)");
-                        clientContext.executeQueryAsync(function () {
-                            var enumerator = items.getEnumerator(),
-                                simpleArray = [];
-                            while (enumerator.moveNext()) {
-                                simpleArray.push(enumerator.get_current());
-                            }
-                            for (var s in simpleArray) {
-                                simpleArray[s].deleteObject();
-                            }
-                            clientContext.executeQueryAsync(function () {
-                                resolve("done");
-                            }, function (sender, args) {
-                                reject(args.get_message());
-                            });
-                        }, function (sender, args) {
-                            reject(args.get_message());
-                        });
+            clientContext.load(items, "Include(Id)");
+
+            clientContext.executeQueryAsync(function () {
+                var enumerator = items.getEnumerator(),
+                    simpleArray = [];
+                while (enumerator.moveNext()) {
+                    simpleArray.push(enumerator.get_current());
+                }
+                console.log(simpleArray);
+                for (var s in simpleArray) {
+                    simpleArray[s].deleteObject();
+                }
+
+                clientContext.executeQueryAsync(function () {
+                    deferred.resolve("done");
+                }, function (sender, args) {
+                    deferred.reject(args.get_message());
+                });
+
+            }, function (sender, args) {
+                reject(args.get_message());
             });
+
+            return deferred.promise;
         }
 
         function updateList(list) {
@@ -142,35 +148,35 @@
         }
 
         function reorderColumn(selectedContentType, listTitle) {
-            return new Promise(function (resolve,reject) {
-                var listContentTypes;
+            var deferred = $q.defer();
+            var listContentTypes;
 
-                var ctx = new SP.ClientContext(spBaseService.baseUrl);
-                var list = ctx.get_web().get_lists().getByTitle(listTitle);
+            var ctx = new SP.ClientContext(spBaseService.baseUrl);
+            var list = ctx.get_web().get_lists().getByTitle(listTitle);
 
-                listContentTypes = list.get_contentTypes();
+            listContentTypes = list.get_contentTypes();
 
-                ctx.load(listContentTypes);
+            ctx.load(listContentTypes);
 
-                ctx.executeQueryAsync(function () {
-                    var itemContenType = listContentTypes.getById(selectedContentType.Id.StringValue);
-                    var itemContenTypeFieldLink = itemContenType.get_fieldLinks();
-                    var reorderedFields = [];
-                    selectedContentType.allFields.forEach(function (field) {
-                        reorderedFields.push(field.InternalName);
-                    });
-                    itemContenTypeFieldLink.reorder(reorderedFields);
-                    itemContenType.update(false);
-                    ctx.executeQueryAsync(function () {
-                        resolve("New order applied successfully.");
-                    }, function (sender, args) {
-                        reject(args.get_message());
-                    });
-                   
-                }, function (sender, args) {
-                    reject(args.get_message());
+            ctx.executeQueryAsync(function () {
+                var itemContenType = listContentTypes.getById(selectedContentType.Id.StringValue);
+                var itemContenTypeFieldLink = itemContenType.get_fieldLinks();
+                var reorderedFields = [];
+                selectedContentType.allFields.forEach(function (field) {
+                    reorderedFields.push(field.InternalName);
                 });
+                itemContenTypeFieldLink.reorder(reorderedFields);
+                itemContenType.update(false);
+                ctx.executeQueryAsync(function () {
+                    deferred.resolve("New order applied successfully.");
+                }, function (sender, args) {
+                    deferred.reject(args.get_message());
+                });
+
+            }, function (sender, args) {
+                deferred.reject(args.get_message());
             });
+            return deferred.promise;
         }
     }
 })();

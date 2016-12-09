@@ -12,6 +12,13 @@
         vm.listName = $stateParams.listName;
         vm.contentTypes = [];
         vm.params = $stateParams;
+        vm.selectedContentType = {
+            allFields: []
+        };
+
+        vm.sortableOptions = {
+
+        };
 
         vm.contentTypeOnchange = function (selectedContentType) {
             listLibraryManagerSvc
