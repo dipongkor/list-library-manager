@@ -9,7 +9,7 @@
         "ui.bootstrap",
         "angular-confirm",
         "toaster",
-        "ui"])
+        "ui.sortable"])
     .constant("IS_APP_WEB", false)
     .config(config);
 
