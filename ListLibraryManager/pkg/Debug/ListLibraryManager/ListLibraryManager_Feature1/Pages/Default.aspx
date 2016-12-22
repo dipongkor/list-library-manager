@@ -19,6 +19,7 @@
     <script src="../Scripts/angular-animate.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular-sanitize.min.js"></script>
     <script src="../Scripts/angular-ui/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+    <script src="../Scripts/sortable.js"></script>
     <script src="../Scripts/loading-bar.min.js" type="text/javascript"></script>
     <script src="../Scripts/toaster.min.js" type="text/javascript"></script>
     <script src="../Scripts/sp-ng-module.min.js" type="text/javascript"></script>

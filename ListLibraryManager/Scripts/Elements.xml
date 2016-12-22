@@ -50,5 +50,6 @@
     <File Path="Scripts\angular-sanitize.min.js.map" Url="Scripts/angular-sanitize.min.js.map" ReplaceContent="TRUE" />
     <File Path="Scripts\angular-sanitize.min.js" Url="Scripts/angular-sanitize.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\angular-sanitize.js" Url="Scripts/angular-sanitize.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\sortable.js" Url="Scripts/sortable.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -22,7 +22,7 @@
 
         vm.removeList = function (listId) {
             $confirm({
-                text: String.format("<b>{0}</b> will be deleted permanently", vm.listName),
+                text: String.format("{0} will be deleted permanently", vm.listName),
                 title: "Are you sure?"
             })
                 .then(function () {

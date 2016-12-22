@@ -176,6 +176,7 @@
             }, function (sender, args) {
                 deferred.reject(args.get_message());
             });
+
             return deferred.promise;
         }
     }
